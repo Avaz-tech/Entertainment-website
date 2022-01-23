@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+body {
+  background: #062928;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 3em;
+}
+
+.navbar .logo span {
+  color: #062928;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+  width: 28px;
+}
+
+.hero {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #417475;
+  letter-spacing: .3em;
+}
+
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: .2em;
+}
+
+.left-col .primary-cta {
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.6em 1.3em;
+  font-size: 2.4em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.left-col .watch-video-cta {
+  color: black;
+  display: block;
+  margin-top: 1em;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.left-col .watch-random {
+  margin-right: .7em;
+  margin-top: 2em;
+  cursor: pointer;
+  width: 40px;
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: .2em;
+}
+
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: .5em;
+  margin-left: 2em;
+}
+
+.features-section img {
+  display: none;
+}
+
+.Social-media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Social-media ul li {
+  padding-left: .5em;
+  padding-right: .5em;
+  margin: auto;
+}
+
+.Social-media ul li img {
+  width: 3em;
+  height: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-top: .3em;
+}
+
+input, textarea {
+  width: 95%;
+  padding: .8em;
+  margin-bottom: 1em;
+}
+
+.send-message-cta {
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: .8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+/*# sourceMappingURL=main.css.map */
