@@ -258,3 +258,10 @@ nav{
     }
 
 }
+ @media only screen and (min-wudth: 1080px){
+      .container{
+          width: 1080px;
+          margin: 0 auto;
+
+      }
+  }
