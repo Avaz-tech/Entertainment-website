@@ -258,10 +258,21 @@ nav{
     }
 
 }
- @media only screen and (min-wudth: 1080px){
+  @media only screen and (min-wudth: 1080px){
       .container{
           width: 1080px;
-          margin: 0 auto;
+          margin: 0 auto
 
       }
+
+      section{
+          padding: 10 em;
+
+      }
+
+      .hero .container{
+
+        display: flex;
+      }
   }
+   
