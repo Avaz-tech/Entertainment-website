@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+
+
 body{
   background: #062928;
   margin: 0;
@@ -20,10 +22,10 @@ body{
        }
     }
 
-    nav{
+   /* nav{
         //display: none;
 
-    }
+    }*/
     .container{
         display: flex;
         place-content:space-between;
@@ -108,19 +110,14 @@ ul.features-list{
        
     ul{
         
-        display: flex;
+       // display: flex;
         
         li{
             
              padding-left: .5em;
              padding-right: .5em;
              margin: auto;
-            img{
-                
-                width:3em;
-                height: 3em;
- 
-            }
+            
         }
     }
 }
