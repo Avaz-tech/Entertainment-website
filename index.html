@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page #1</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/624e9e82c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigation bar creation-->
     <div class="navbar"> 
             <div class="container">
                 <a class="logo" href="#">A-<span>Movie</span></a>
@@ -35,25 +36,25 @@
            
     </div>
 
-    
+    <!-- Recomended Movie block -->
     <div class="featured-conten">
 
         <div class="container">
             <img class="trending" src="images/mulan.jpg"  style="background: -o-linear-gradient(to bottom,rgba(0,0,0,0),#151515);">
              <div class="featured-desc">
-                 Good movie
+                 This week's popular one
              </div>
              <button class="featured-button">Watch</button>
         </div>
     </div>
     
-
+     <!-- Trailer video block -->
     <section class="hero"> 
         <div class="container">
               
             <div class="left-col">
-              <p class="subhead">  It's Nitty &amp Gritty </p> 
-              <h1>A Task App That Doesn't Stink!</h1>
+              <p class="subhead">  Movie Adventure </p> 
+              <h1>Let's start our trip!</h1>
 
               <div class="hero-cta">
                 <iframe type="video/webm"  width="320" height="240" src="https://www.youtube.com/embed/6qXYDeec3Gs"  autoplay controls></iframe>
@@ -66,7 +67,7 @@
         </div>
     </section>
 
-        
+        <!-- Creation of genre list of Movies -->
         <section class="features-section">
             <div class="contianer">
                 <ul class="features-list">
@@ -83,7 +84,8 @@
                 
             </div>
         </section>
-
+        <!-- Creation of ContactUs  block -->
+        <!-- Getting user's name, email and message -->
         <section class="conatact-us">
             <div class="contianer">
                 <div class="conatact-left">
@@ -104,12 +106,13 @@
                 </div>
             </div>
         </section>
-        
+         <!-- Social media Contact section -->
         <section class="Social-media">
             <div class="conatianer">
                 <ul >
                     <li>
-                       <img src="images/instagram-brands.svg" alt="Instagram"> 
+                        <i class="fa-regular fa-box"></i>
+                    
                     </li>
                     <li>
                         <img src="images/twitter-brands.svg" alt="Twitter">
@@ -120,7 +123,7 @@
                 </ul>
             </div>
         </section>
-
+         <!-- Modifiying of menu button (Navigation bar elements) for Mobile version using java script -->
         <script>
 
             const mobileBtn = document.getElementById('mobile-cta')
