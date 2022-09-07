@@ -4,12 +4,12 @@ body {
   margin: 0;
   font-family: 'Poppins';
 }
-/**/
+/* Modification of Navigation bar */
 .navbar {
   background: white;
   padding: 0.5em;
 }
-/**/
+/* Logo modification */
 .navbar .logo {
   text-decoration: none;
   font-weight: bold;
@@ -32,17 +32,17 @@ body {
   display: flex;
   place-content: space-between;
 }
-/**/
+/* Mobile menu modification for mobile version */
 .navbar .mobile-menu {
   cursor: pointer;
   width: 28px;
 }
-/**/
+/* From here modification of movie trailer block */
 .featured-conten .container{
    display:flexbox;
  
 }
-
+/* Image space modifications*/
 .featured-conten .container img{
    
   width: 100%;
@@ -58,7 +58,7 @@ body {
     font-weight: bold;
     color: antiquewhite;
  }
-  /**/
+  /*  Trailer sect. watch button modification */
 .featured-conten .container button{
 
   position:absolute;
@@ -74,7 +74,7 @@ body {
 }
    
    
-
+/* Trailer block text modifications*/
 .hero {
   text-align: center;
   
@@ -128,7 +128,7 @@ ul {
   cursor: pointer;
   width: 40px;
 }
-
+/**/
 ul.features-list {
   margin: 0;
   padding-left: .2em;
@@ -141,11 +141,11 @@ ul.features-list li {
   margin-bottom: .5em;
   margin-left: 2em;
 }
-
+/**/
 .features-section img {
   display: none;
 }
-
+/* Social media contacts sect. modification */
 .Social-media ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +157,7 @@ ul.features-list li {
   padding-right: .5em;
   margin: auto;
 }
-
+/* From here  ContactUs block modifications */
 h2 {
   font-size: 2em;
   margin-left: 3%;
@@ -169,7 +169,7 @@ label {
   margin-top: .3em;
   margin-left: 3%;
 }
-
+/* input-Text blocks modifications */
 input, textarea {
   width: 92%;
   padding: .8em;
@@ -178,7 +178,7 @@ input, textarea {
   
 
 }
-
+/* Sen message button modificaitons */
 .send-message-cta {
   background-color: white;
   font-weight: bold;
@@ -198,7 +198,7 @@ iframe {
   width: 100%;
   height: 300px;
 }
-
+/* Mobile menu mocifications */
 nav.menu-btn {
   display: block;
 }
@@ -214,7 +214,7 @@ nav {
   padding: 1em;
   
 }
-
+/**/
 nav ul.primary-nav {
   margin-top: 5em;
   padding-left: 10%;
@@ -230,18 +230,18 @@ nav li a {
   text-align: right;
 
 }
-
+/**/
 nav li a:hover {
   font-weight: bold;
 }
-
+/* mobile menu: Exit button modifications */
 .mobile-menu-exit {
   float: right;
   margin: .5em;
   cursor: pointer;
   width: 7%;
 }
-
+/**/
 @media only screen and (min-width: 768px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
@@ -284,6 +284,7 @@ nav li a:hover {
   .navbar nav li.current a {
     font-weight: bold;
   }
+  /* Premium button modificaitons */
   .navbar nav li.premium-cta a {
     color: #062928;
     border: solid 3px #062928;
