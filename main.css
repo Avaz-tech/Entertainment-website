@@ -82,8 +82,7 @@ body {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  
 }
 
 /*section {
@@ -284,13 +283,16 @@ nav li a:hover {
   .navbar nav li.current a {
     font-weight: bold;
   }
+  .navbar nav li.contact1 a{
+    margin-top: 0.2em;
+  }
   /* Premium button modificaitons */
   .navbar nav li.premium-cta a {
     color: #062928;
     border: solid 3px #062928;
     font-weight: bold;
     border-radius: 5em;
-    margin-top: 0.7em;
+    margin-top: 0.1em;
   }
   .navbar nav li.premium-cta a:hover {
     background: #062928;
