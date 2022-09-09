@@ -39,7 +39,7 @@ body {
 }
 /* From here modification of movie trailer block */
 .featured-conten .container{
-   display:flexbox;
+   display:inline;
  
 }
 /* Image space modifications*/
@@ -51,10 +51,10 @@ body {
 }
 .featured-conten .container div{
 
-    position: fixed;
-    left: 10%;
+    position:absolute;
+    left: 15%;
     top: 45%;
-    font-size: 25px;
+    font-size: 45px;
     font-weight: bold;
     color: antiquewhite;
  }
@@ -77,6 +77,7 @@ body {
 /* Trailer block text modifications*/
 .hero {
   text-align: center;
+  
   
 }
 
@@ -112,21 +113,6 @@ ul {
   font-weight: bold;
   display: inline-block;
 }
-
-.left-col .watch-video-cta {
-  color: black;
-  display: block;
-  margin-top: 1em;
-  text-decoration: none;
-  font-size: 1.4em;
-}
-
-.left-col .watch-random {
-  margin-right: .7em;
-  margin-top: 2em;
-  cursor: pointer;
-  width: 40px;
-}
 /**/
 ul.features-list {
   margin: 0;
@@ -155,6 +141,8 @@ ul.features-list li {
   padding-left: .5em;
   padding-right: .5em;
   margin: auto;
+
+  
 }
 /* From here  ContactUs block modifications */
 h2 {
