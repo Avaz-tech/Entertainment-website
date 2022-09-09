@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-
-
+/* */
 body{
   background: #062928;
   margin: 0;
@@ -76,21 +74,7 @@ section{
         font-weight: bold;
         display: inline-block;
     }
-    .watch-video-cta{
-       color: black;
-       display: block;
-       margin-top: 1em;
-       text-decoration: none;
-       font-size: 1.4em;
-
-    }
-    .watch-random{
-        margin-right: .7em;
-        margin-top: 2em;
-        cursor: pointer;
-        width: 40px;
-        
-    }
+   
 
 }
 ul.features-list{
@@ -110,7 +94,7 @@ ul.features-list{
        
     ul{
         
-       // display: flex;
+        display: flex;
         
         li{
             
