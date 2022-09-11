@@ -9,6 +9,7 @@ body {
   background: white;
   padding: 0.5em;
 }
+
 /* Logo modification */
 .navbar .logo {
   text-decoration: none;
@@ -40,8 +41,13 @@ body {
 /* From here modification of movie trailer block */
 .featured-conten .container{
    display:inline;
- 
 }
+
+.featured-conten .container .featured-desc {
+  color: rgb(4, 252, 12);
+  font-family: Georgia;
+}
+
 /* Image space modifications*/
 .featured-conten .container img{
    
@@ -91,28 +97,17 @@ ul {
 }*/
 
 .left-col .subhead {
+  padding-left: 400px;
   text-transform: uppercase;
+  font-size: larger;
   font-weight: bold;
   color: #800020;
   letter-spacing: .3em;
 }
 
-.left-col h1 {
-  font-size: 2.5em;
-  line-height: 1.3em;
-  margin-top: .2em;
-}
 
-.left-col .primary-cta {
-  background: white;
-  color: black;
-  text-decoration: none;
-  padding: 0.6em 1.3em;
-  font-size: 2.4em;
-  border-radius: 5em;
-  font-weight: bold;
-  display: inline-block;
-}
+
+
 /**/
 ul.features-list {
   margin: 0;
@@ -182,7 +177,8 @@ input, textarea {
 }
 
 iframe {
-  width: 100%;
+  display: inline;
+  width: 50%;
   height: 300px;
 }
 /* Mobile menu mocifications */
@@ -288,6 +284,7 @@ nav li a:hover {
   }
 }
 
+
 @media only screen and (min-width:1080px) {
   .container {
     width: 1080px;
@@ -298,3 +295,47 @@ nav li a:hover {
   }
 }
 /*# sourceMappingURL=main.css.map */
+.movie-list{
+
+  padding: 20px;
+  }
+  .main-list{
+    display: flex;
+    align-items:top;
+    height: 300px;
+  }
+  .list-item{
+
+    margin-right: 30px;
+    margin-left: 35px;
+    position: relative;
+    
+  }
+.list-item .item-image{
+
+  width: 280px;
+  height: 180px;
+  transition: all 0.8s ease-in-out;
+  
+}
+.list-item:hover .item-image{
+  transform: scale(1.2);
+  margin: 0 10px;
+
+}
+.list-item .movie-title{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:antiquewhite;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  position:absolute;
+  top: 195px;
+  left: 10px;
+  
+  
+}
+
+
+
+ 
