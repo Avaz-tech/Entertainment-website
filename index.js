@@ -33,3 +33,10 @@ function sum(x,y){
 }
 
 sum(3,4)
+
+ var num = 3.1
+
+ console.log(Math.round(num))
+
+ console.log(Math.pow(4,5))
+ console.log(Math.abs(-89))
