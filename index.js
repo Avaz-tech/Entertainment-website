@@ -48,3 +48,13 @@ myArr.push(i);
 i++ 
 }
 console.log(myArr);
+
+let person = {
+    name: 'Ben',
+    age: 26
+};
+console.log(person);
+
+person.name = "Avaz"
+
+console.log(person);
