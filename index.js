@@ -40,3 +40,11 @@ sum(3,4)
 
  console.log(Math.pow(4,5))
  console.log(Math.abs(-89))
+
+var myArr = [];
+var i = 0;
+while (i<5){
+myArr.push(i);
+i++ 
+}
+console.log(myArr);
