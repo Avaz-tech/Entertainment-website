@@ -58,3 +58,10 @@ console.log(person);
 person.name = "Avaz"
 
 console.log(person);
+
+function randFrac(){
+
+    return Math.random();
+}
+
+console.log(randFrac(1,10));
