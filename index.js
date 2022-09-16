@@ -75,3 +75,10 @@ function conveToItn(str) {
 }
 
 console.log(conveToItn("56"));  
+
+function checkEqual(a,b){
+   return a===b ? true : false;
+
+}
+
+console.log(checkEqual(5,6));
