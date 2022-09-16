@@ -34,6 +34,8 @@ function sum(x,y){
 
 sum(3,4)
 
+
+
  var num = 3.1
 
  console.log(Math.round(num))
@@ -65,3 +67,11 @@ function randFrac(){
 }
 
 console.log(randFrac(1,10));
+
+function conveToItn(str) {
+
+ return parseInt(str);
+   
+}
+
+console.log(conveToItn("56"));  
