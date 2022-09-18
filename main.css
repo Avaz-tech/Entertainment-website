@@ -356,6 +356,11 @@ nav li a:hover {
   opacity: 1;
   transition: all 1s ease-in-out;
 }
+.arrow{
+
+  font-size: 120px;
+  
+}
 
 
  
