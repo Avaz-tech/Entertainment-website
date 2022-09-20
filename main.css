@@ -356,12 +356,17 @@ nav li a:hover {
   opacity: 1;
   transition: all 1s ease-in-out;
 }
+.movie-list .list-wrapper{
+  position: relative;
+}
 .arrow{
 
   font-size: 120px;
-    position: absolute;
-    top: 30px;
-  
+  position: absolute;
+  top: 60px;
+  right: 0;
+  color: lightgray;
+  opacity: .5;
 }
 
 
