@@ -1,12 +1,12 @@
 
+ var arrows = document.querySelectorAll(".arrow");
+ var movieLists = document.querySelectorAll(".main-list");
+ 
 
-arrows = document.querySelectorAll(".arrow");
-movieLists = document.querySelectorAll(".movie-list");
+var hs = new HorizontalScroll.default({
+  arrows: arrows,
+  movieLists:movieLists,
+  isAnimated: true,
+  springEffect:0.8,
 
-console.log(arrows)
-
-arrows.forEach((arrow,i) => {
-    arrow.addEventListener('click',() =>{
-      movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value -300}px)`;
-    });
 });
