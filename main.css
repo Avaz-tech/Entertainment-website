@@ -303,6 +303,9 @@ nav li a:hover {
     display: flex;
     align-items:top;
     height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+
   }
   .list-item{
 
@@ -358,6 +361,7 @@ nav li a:hover {
 }
 .movie-list .list-wrapper{
   position: relative;
+  overflow: hidden;
 }
 .arrow{
 
@@ -367,6 +371,7 @@ nav li a:hover {
   right: 0;
   color: lightgray;
   opacity: .5;
+  cursor: pointer;
 }
 
 
