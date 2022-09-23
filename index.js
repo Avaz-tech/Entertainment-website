@@ -1,12 +1,7 @@
 
- var arrows = document.querySelectorAll(".arrow");
- var movieLists = document.querySelectorAll(".main-list");
- 
+const arrows = document.querySelectorAll(".arrow");
+const movieLists  = document.querySelectorAll("main-list");
 
-var hs = new HorizontalScroll.default({
-  arrows: arrows,
-  movieLists:movieLists,
-  isAnimated: true,
-  springEffect:0.8,
-
+arrows.addEventListener("click", ()=> {
+   movieLists.scrollLeft -=300
 });
