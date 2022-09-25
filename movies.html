@@ -7,6 +7,10 @@
     <title>Movies</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/624e9e82c5.js" crossorigin="anonymous"></script>
+    <script src="swiper-bundle.min.js"></script> 
+    <!--  Swiper CSS -->
+
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 </head>
 <body>
     <!-- Navigation bar creation-->
@@ -35,10 +39,10 @@
        
     </div>
 
-    <div class="slide-container">
+    <div class="slide-container swiper">
         <div class="slide-content">
-            <div class="card-wraper">
-                <div class="card">
+            <div class="card-wraper swipe-wrapper">
+                <div class="card swiper-slide">
                     <div class="content-item">
                         <span class="overlay"></span>
 
@@ -48,13 +52,26 @@
 
                     </div>
 
-                    </div class="card-content">
+                    <div class="card-content">
                       The King
-                    <div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
         
     
 </body>
+
+
+<!--  Swiper JS -->
+
+<script src="index.js"></script>
+
+
+
+</html>
+
