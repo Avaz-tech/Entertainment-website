@@ -400,12 +400,15 @@ nav li a:hover {
   border: 1px solid #800020;
 }
 
-.card{
-  
-  color: #d8e3ff;
-}
 .slide-content{
-  margin: 0 20px;
+  margin: 0 20px; 
+}
+.card .card-content{
+  position: center;
+  padding-top: 5px;
+  margin: 15px;
+  width: 150px;
+  text-align: center;
 }
 
  
