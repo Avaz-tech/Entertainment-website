@@ -3,6 +3,9 @@ body {
   background: #062928;
   margin: 0;
   font-family: 'Poppins';
+  min-height: 100hv;
+  justify-content: center;
+  align-items: center;
 }
 /* Modification of Navigation bar */
 .navbar {
@@ -383,32 +386,57 @@ nav li a:hover {
 
 /*From Here Modifications for Movies Page*/
 
-.item-img{
-  position: relative;
-  height: 190px;
-  width: 160px;
+.slide-container{
+  max-width: 1120px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #20272E;
+}
+.slide-content{
+  margin: 0 40px; 
+}
+.card{
+  width: 170px;
+
+  border-radius: 25px;
+  background-color: #d8e3ff;
+  
+}
+.content-item, .card-content{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  top: 15px;
-  left: 10px;
-  padding: 3px;
+  padding: 10px 14px; 
+}
+.content-item{
+  position: relative;
+  row-gap: 5px;
+}
+.overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
  
 }
-.item-img  .card-img{
+.item-img{
+  position: relative;
+  height: 200px;
+  width: 150px;
+  border-radius: 15%; 
+  padding: 3px;
+ 
+ 
+}
+.item-img  .itm-img{  
   height: 100%;
   width:100%;
   border-radius: 15%;
   border: 1px solid #800020;
 }
 
-.slide-content{
-  margin: 0 20px; 
-}
-.card .card-content{
-  position: center;
-  padding-top: 5px;
-  margin: 15px;
-  width: 150px;
-  text-align: center;
-}
+
 
  
