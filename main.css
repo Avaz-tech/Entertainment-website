@@ -4,8 +4,7 @@ body {
   margin: 0;
   font-family: 'Poppins';
   min-height: 100hv;
-  justify-content: center;
-  align-items: center;
+  
 }
 /* Modification of Navigation bar */
 .navbar {
@@ -392,6 +391,7 @@ nav li a:hover {
   width: 100%;
   justify-content: center;
   background-color: #20272E;
+  padding: 40px 0;
 }
 .slide-content{
   margin: 0 40px; 
