@@ -1,7 +1,15 @@
-
-const arrows = document.querySelectorAll(".arrow");
-const movieLists  = document.querySelectorAll("main-list");
-
-arrows.addEventListener("click", ()=> {
-   movieLists.scrollLeft -=300
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  slidesPerGroup: 4,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
