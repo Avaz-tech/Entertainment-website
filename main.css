@@ -385,56 +385,42 @@ nav li a:hover {
 
 /*From Here Modifications for Movies Page*/
 
-.slide-container{
-  max-width: 1120px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  background-color: #20272E;
-  padding: 40px 0;
-}
-.slide-content{
-  margin: 0 40px; 
-}
-.card{
-  width: 170px;
-
-  border-radius: 25px;
-  background-color: #d8e3ff;
-  
-}
-.content-item, .card-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px; 
-}
-.content-item{
-  position: relative;
-  row-gap: 5px;
-}
-.overlay{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
- 
-}
-.item-img{
-  position: relative;
-  height: 200px;
-  width: 150px;
-  border-radius: 15%; 
-  padding: 3px;
- 
- 
-}
-.item-img  .itm-img{  
-  height: 100%;
+.swiper {
   width:100%;
-  border-radius: 15%;
-  border: 1px solid #800020;
+  height: 250px;
+  top: 20px;
+   
+}
+
+.swiper-slide {
+
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  max-width:220px;
+  border-radius: 20px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 
