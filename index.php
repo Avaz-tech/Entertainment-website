@@ -22,4 +22,15 @@ $distance = getDistanceBetweenPointsNew($point1['lat'], $point1['long'], $point2
 foreach ($distance as $unit => $value) {
     echo $unit.': '.number_format($value,4).'<br />';
 }
+
+
+$expected=array('username','age','city','street');
+foreach($expected as $key){
+    if(!empty($_POST[$key])){
+        ${key}=$_POST[$key];
+    }
+    else{
+        ${key}=NULL;
+    }
+}
 ?>
