@@ -22,5 +22,17 @@ echo get_resource_type($doc->doc) . "\n";
 
 
 }
+<?php
+//prints more than 1 expressions
+  echo "ehynd";
+ // prints just one expression
+  print_r([1,2,4]);
 
+   //Returns data type and lenght
+   var_dump(true);
+    
+   var_export('hello');
+
+
+?>
 
