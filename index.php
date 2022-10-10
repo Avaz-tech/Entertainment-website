@@ -31,7 +31,7 @@ echo get_resource_type($doc->doc) . "\n";
    //Returns data type and lenght
    var_dump(true);
     
-   var_export('hello');
+
 
 
 ?>
