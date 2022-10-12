@@ -7,20 +7,17 @@ echo "Today is " . date("Y.m.d") . "<br>";
 echo "Today is " . date("Y-m-d") . "<br>";
 echo "Today is " . date("l");
 
-    <?php
-// prints: mysql link
-$c = mysql_connect();
-echo get_resource_type($c) . "\n";
+$x = 5;
+$y = 7;
 
-// prints: stream
-$fp = fopen("foo", "w");
-echo get_resource_type($fp) . "\n";
-
-// prints: domxml document
-$doc = new_xmldoc("1.0");
-echo get_resource_type($doc->doc) . "\n";
-
-
+function myTest()
+{
+  
+  $GLOBALS['y'] = $GLOBALS['y'] + $GLOBALS['x'];
+  echo $GLOBALS['y'];
 }
+
+myTest();
+
 ?>
 
