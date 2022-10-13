@@ -21,7 +21,11 @@ class Car{
     return "This is " .$this->model .  "and it's price is " . $this->price . "!";
   }
  }
-
+  $carBuy = new Car('Benz ',30000);
+  echo $carBuy -> txt();
+  echo "<br>";
+  $carBuy = new Car('Malibu ', 40000);
+  echo $carBuy -> txt();  
 
 
 ?>
