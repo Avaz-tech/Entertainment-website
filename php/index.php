@@ -23,20 +23,6 @@ class TextInput
     }
 }
 
-class NumericInput extends TextInput
-{
-  public function add($input)
-  {
-   $new_input = preg_replace('/\D/', '', $input);
-   $this->result= $this->result.$new_input;
-  }
-}
-
-$input = new NumericInput();
-$input->add('1');
-$input->add('a');
-$input->add('0');
-echo $input->getValue();
 
 ?>
 
