@@ -164,7 +164,7 @@
             </div>
         </div>
     </div>
-    
+      
      <!-- Trailer video block -->
     <section class="hero"> 
         <div class="container">
@@ -197,17 +197,20 @@
                 <div class="conatact-left">
                     <h2>Contact Us</h2>
 
-                    <form action="">
+                    <form  onsubmit="event.preventDefault(); validateForm() ">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name">
+                        <small class="error"></small>
 
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Your Email">
+                        <small class="error"></small>
 
                         <label for="message">Your Message</label>
                         <textarea name="message" id="message" cols="40" rows="10"></textarea>
+                        <small class="error"></small> 
 
-                        <input type="submit" class="send-message-cta" value="Send Message ">
+                        <input type="submit" class="send-message-cta" value="Send Message">
                     </form>
                 </div>
             </div>
@@ -247,6 +250,7 @@
     
          <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
          <script src="index.js"></script> 
+         <script src="getMessage.js"></script> 
     
 </body>
 </html>    
