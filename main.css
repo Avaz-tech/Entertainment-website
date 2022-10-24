@@ -1,6 +1,6 @@
 /* Modification of body */
 body {
-  background: #062928;
+  background: #5A5560;
   margin: 0;
   font-family: 'Poppins';
   min-height: 100hv;
@@ -8,7 +8,7 @@ body {
 }
 /* Modification of Navigation bar */
 .navbar {
-  background: white;
+  background: #5A5560;
   padding: 0.5em;
 }
 
@@ -16,13 +16,13 @@ body {
 .navbar .logo {
   text-decoration: none;
   font-weight: bold;
-  color:#800020;
+  color: #FAED26;;
   font-size: 2.2em;
   padding-right: 9%;
 }
 /**/
 .navbar .logo span {
-  color: #062928;
+  color: #FAED26;
 }
 
 .navbar nav {
@@ -183,6 +183,19 @@ iframe {
   width: 50%;
   height: 300px;
 }
+.error{
+  width: 92%;
+  padding: .8em;
+  margin-bottom: 1em;
+  margin-left: 3%;
+   color: red;
+}
+.error-border{
+  border-bottom: 1px solid red;
+}
+
+
+
 /* Mobile menu mocifications */
 nav.menu-btn {
   display: block;
@@ -282,7 +295,7 @@ nav li a:hover {
   }
   .navbar nav li.premium-cta a:hover {
     background: #062928;
-    color: #FF5733;
+    color: #FAED26;;
   }
 }
 
@@ -429,3 +442,5 @@ nav li a:hover {
   max-width: 70%;
   padding-left:200px;
  }
+
+ 
