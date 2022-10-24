@@ -9,16 +9,24 @@ const errorNodes = document.querySelectorAll(".error");
 function validateForm(){
 
    clearMessages();
+   let errorFlag = false;
 
    if(nameInput.value.length < 1){
       errorNodes[0].innerText = "Name cannot be blank";
-      
       nameInput.classList.add("error-border");  
+      errorFlag = true;
    } 
 
     if(!emailIsValid(email.value)){
         errorNodes[1].innerText = "Invalid email address";
         email.classList.add("error-border");
+        errorFlag = true;
+    }
+
+    if(message.value.length < 1){
+        errorNodes[2].innerText = "Pleas e enter message";
+        message.classList.add("error-border");
+        errorFlag = true;
     }
 
    //Clear error / success messages
@@ -29,6 +37,7 @@ function validateForm(){
       errorNodes[i].innerText = ""; 
     }
      nameInput.classList.remove("error-border"); 
+     email.classList.remove("error-border");
 
    }
    
