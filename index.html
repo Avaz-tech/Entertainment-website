@@ -197,13 +197,13 @@
                 <div class="conatact-left">
                     <h2>Contact Us</h2>
 
-                    <form  onsubmit="event.preventDefault(); validateForm() ">
+                    <form action="" method="POST" onsubmit="event.preventDefault(); validateForm(); sendMsg(e)">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name">
                         <small class="error"></small>
 
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email">
+                        <input type="email" id="email" name="email" placeholder="Email...">
                         <small class="error"></small>
 
                         <label for="message">Your Message</label>
@@ -212,6 +212,8 @@
 
                         <input type="submit" class="send-message-cta" value="Send Message">
                     </form>
+
+                  
                 </div>
             </div>
         </section>
@@ -250,7 +252,9 @@
     
          <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
          <script src="index.js"></script> 
+         <script src="https://smtpjs.com/v3/smtp.js"></script>
          <script src="getMessage.js"></script> 
+         
     
 </body>
 </html>    
