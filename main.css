@@ -443,4 +443,23 @@ nav li a:hover {
   padding-left:200px;
  }
 
+ /* Styling form of Contact page */
+
+ .send-message-cta2{
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: .8em 2em;
+  width: 150px;
+  cursor: pointer;
+  margin-left: 3%;
+
+  
+}
+
+
  
