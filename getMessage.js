@@ -1,8 +1,8 @@
 // Get data
+const form = document.querySelector("form");
 const nameInput = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
-const success = document.querySelector("#success");
 const errorNodes = document.querySelectorAll(".error");
 
 //Validate data
@@ -47,3 +47,18 @@ function validateForm(){
         return pattern.test(email);
    }
 }  
+
+//Function to send the email
+function sendMsg(e){
+    e.preventDefault();
+    email.send({
+        SecureToken : "9bdaa6ae-acbe-47d7-9a09-7ad52b05d709",
+        To : 'avaz.ravshan1@gmail.com',
+        From : email.value,
+        Subject : "Contact Form",
+        Body : message.value
+    }).then(
+      message => alert(message)
+    );
+}
+//Add event Listener submit
