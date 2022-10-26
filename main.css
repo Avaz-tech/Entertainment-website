@@ -162,20 +162,18 @@ input, textarea {
   
 
 }
-/* Sen message button modificaitons */
-.send-message-cta {
+.send-message-cta2{
   background-color: white;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.1em;
   border: none;
   margin-bottom: 5em;
   border-radius: 5em;
   display: inline-block;
   padding: .8em 2em;
-  width: unset;
+  width: 150px;
   cursor: pointer;
-
-  
+  margin-left: 3%;
 }
 
 iframe {
@@ -183,17 +181,6 @@ iframe {
   width: 50%;
   height: 300px;
 }
-.error{
-  width: 92%;
-  padding: .8em;
-  margin-bottom: 1em;
-  margin-left: 3%;
-   color: red;
-}
-.error-border{
-  border-bottom: 1px solid red;
-}
-
 
 
 /* Mobile menu mocifications */
@@ -443,23 +430,9 @@ nav li a:hover {
   padding-left:200px;
  }
 
- /* Styling form of Contact page */
 
- .send-message-cta2{
-  background-color: white;
-  font-weight: bold;
-  font-size: 1.1em;
-  border: none;
-  margin-bottom: 5em;
-  border-radius: 5em;
-  display: inline-block;
-  padding: .8em 2em;
-  width: 150px;
-  cursor: pointer;
-  margin-left: 3%;
 
-  
-}
+
 
 
  
