@@ -39,42 +39,21 @@
         <!-- Creating Contact messaging block  -->
            <h2>Leave Your Message..</h2>
           <form class="contact_form" action="# ">
+            <label for="name">Name</label>
             <input class="name" type="text" placeholder="Name">
+
+            <label for="email">Email</label>
             <input class="email" type="email"  placeholder="Email">
+
+            <label for="message">Your Message</label>
             <textarea class="msg" cols="5" rows="5" placeholder="Your message"></textarea>
+
             <button class="send-message-cta2" type="submit">Send</button>
 
           </form> 
-         
+           <!-- Calling javascript files -->
           <script src="https://smtpjs.com/v3/smtp.js"></script>
- 
-          <script>
-            const form  = document.querySelector('.contact_form');
-            function sendMsg(e){
-               e.preventDefault();
-               
-                const name = document.querySelector('.name');
-                   email = document.querySelector('.email');
-                   msg = document.querySelector('.msg');
-
-                   //Funciton to send email
-
-                Email.send({
-                    SecureToken : "d0d47027-a8ca-415c-8bc1-f7d310f2e7ca",
-                    To : 'avaz.ravshan1@gmail.com',
-                    From : email.value,
-                    Subject : "Contact Form ",
-                    Body : msg.value
-                    }).then(
-                       message => alert(message)
-                      );
-
-            }
-
-            // Add event listener submit
-            form.addEventListener('submit',sendMsg);
-             
-          </script>
+          <script src="getMessage.js"></script>
      
  </body>
  </html>
