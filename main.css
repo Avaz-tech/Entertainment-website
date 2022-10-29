@@ -5,6 +5,7 @@ body {
   font-family: 'Poppins';
   min-height: 100hv;
   
+  
 }
 /* Modification of Navigation bar */
 .navbar {
@@ -65,28 +66,21 @@ body {
     font-size: 45px;
     font-weight: bold;
     color: antiquewhite;
- }
-  /*  Trailer sect. watch button modification */
+}
+/*  Trailer sect. watch button modification */
 .featured-conten .container button{
 
+  background-color: #5A5560;
+  background: local;
   position:absolute;
-  color: #800020;
-  font-size: large;
+  color: #FAED26;
+  font-size: x-large;
   top: 70%;
   left: 15%;
-  border-radius: 10px;
-  text-decoration: #800020;
-  font-family:Georgia;
-  border-color: #d8e3ff;
+  border-radius: 15px;
+  border-color: #5A5560;
+  font-family: Georgia;
   font-weight: bold;
-}
-   
-   
-/* Trailer block text modifications*/
-.hero {
-  text-align: center;
-  
-  
 }
 
 ul {
@@ -94,9 +88,11 @@ ul {
   
 }
 
-/*section {
-  padding: 5em 2em;
-}*/
+section {
+  position: relative;
+  padding-top: 10px;
+ 
+}
 
 .left-col .subhead {
   padding-left: 400px;
@@ -112,26 +108,34 @@ ul {
 
 /**/
 ul.features-list {
-  margin: 0;
-  padding-left: .2em;
-  display: -ms-grid;
-  display: grid;
+  display: flex;
+
 }
 
 ul.features-list li {
-  font-size: 1.1em;
-  margin-bottom: .5em;
-  margin-left: 2em;
+
+  font-size: 1.4em;
+  padding: 10px;
+  padding-right: .5em;
+  margin: auto;
+  font-weight: bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+ 
+}
+ul.features-list li:hover{
+
+  
+  background-color: #FAED26;   
+  border-radius: 2em;
+  
 }
 /**/
-.features-section img {
-  display: none;
-}
+
 /* Social media contacts sect. modification */
 .Social-media ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
+  padding-top: 10px;
 } 
 
 .Social-media ul li {
@@ -270,19 +274,18 @@ nav li a:hover {
     font-weight: bold;
   }
   .navbar nav li.contact1 a{
-    margin-top: 0.2em;
+    margin: 0;
   }
   /* Premium button modificaitons */
   .navbar nav li.premium-cta a {
     color: #062928;
     border: solid 3px #062928;
-    font-weight: bold;
     border-radius: 5em;
     margin-top: 0.1em;
   }
   .navbar nav li.premium-cta a:hover {
     background: #062928;
-    color: #FAED26;;
+    color: #FAED26;
   }
 }
 
@@ -416,7 +419,7 @@ nav li a:hover {
 }
 
 .swiper-slide img {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
   border-radius: 20px;
