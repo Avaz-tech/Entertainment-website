@@ -4,37 +4,52 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/624e9e82c5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+   
 </head>
 <body>
- <!-- Navigation bar creation-->
- <div class="navbar"> 
-    <div class="container">
-        <a class="logo" href="#">A-<span>Movie</span></a>
+    <!-- Navigation bar creation-->
+    <div class="navbar"> 
+            <div class="container">
+                <a class="logo" href="#">A-<span>Movie</span></a>
 
-        <img id="mobile-cta"  class="mobile-menu" src="webfonts/bars-solid.svg" alt="Navigation">
-        
-         <nav>
-            <img id="mobile-exit" class="mobile-menu-exit" src="webfonts/xmark-solid.svg" alt="Exit">
-            <ul class="primary-nav">
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="dramas.html">Dramas</a></li>
-            </ul>
-            
-            <ul class="secondary-nav">
-                <li class="contact1"><a href="contact.html">Contact</a></li>
-                <li class="premium-cta"><a href="premium.html">Get Premium</a></li>
+                <img id="mobile-cta"  class="mobile-menu" src="webfonts/bars-solid.svg" alt="Navigation">
                 
-            </ul>
+                 <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="webfonts/xmark-solid.svg" alt="Exit">
+                    <ul class="primary-nav">
+                        <li ><a href="index.html">Home</a></li>
+                        <li><a href="movies.html">Movies</a></li>
+                        <li><a href="dramas.html">Dramas</a></li>
+                    </ul>
+                    
 
-         </nav>
+                    <ul class="secondary-nav">
+                        <li class="contact1"><a href="contact.html">Contact</a></li>
+                        <li class="current" class="premium-cta"><a href="premium.html">Get Premium</a></li>
+                        
+                    </ul>
+
+                 </nav>
+            </div>
+           
     </div>
-   
-   </div>
-    
-  
-    
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+         nav = document.querySelector('nav');
+         mobileBtnExit = document.getElementById('mobile-exit');
+
+         mobileBtn.addEventListener('click',() => {
+             nav.classList.add('menu-btn');
+         })
+
+         mobileBtnExit.addEventListener('click',() => {
+         nav.classList.remove('menu-btn');
+         })
+     </script>
 </body>
