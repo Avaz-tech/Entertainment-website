@@ -36,7 +36,453 @@ body {
   display: flex;
   place-content: space-between;
 }
+/* Mobile menu modification for mobile version *//* Modification of body */
+body {
+  background: #5A5560;
+  margin: 0;
+  font-family: 'Poppins';
+  min-height: 100hv;
+  
+  
+}
+/* Modification of Navigation bar */
+.navbar {
+  background: #5A5560;
+  padding: 0.5em;
+}
+
+/* Logo modification */
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FAED26;;
+  font-size: 2.2em;
+  padding-right: 9%;
+}
+/* Navigaiton bar modification */
+.navbar .logo span {
+  color: #FAED26;
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
 /* Mobile menu modification for mobile version */
+.navbar .mobile-menu {
+  cursor: pointer;
+  width: 28px;
+}
+/* From here modification of movie trailer block */
+.featured-conten .container{
+   display:inline;
+}
+
+.featured-conten .container .featured-desc {
+  color: rgb(4, 252, 12);
+  font-family: Georgia;
+}
+
+/* Image space modifications*/
+.featured-conten .container img{
+   
+  width: 100%;
+  height: 600px;
+ 
+}
+.featured-conten .container div{
+
+    position:absolute;
+    left: 15%;
+    top: 45%;
+    font-size: 45px;
+    font-weight: bold;
+    color: antiquewhite;
+}
+/*  Trailer sect. watch button modification */
+.featured-conten .container button{
+
+  background-color: #5A5560;
+  background: local;
+  position:absolute;
+  color: #FAED26;
+  font-size: x-large;
+  top: 70%;
+  left: 15%;
+  border-radius: 15px;
+  border-color: #5A5560;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+section {
+  position: relative;
+  padding-top: 10px;
+ 
+}
+
+.left-col .subhead {
+  padding-left: 400px;
+  text-transform: uppercase;
+  font-size: larger;
+  font-weight: bold;
+  color:#800020;
+  letter-spacing: .3em;
+}
+
+
+
+
+/**/
+ul.features-list {
+  display: flex;
+
+}
+
+ul.features-list li {
+
+  font-size: 1.4em;
+  padding: 10px;
+  padding-right: .5em;
+  margin: auto;
+  font-weight: bolder;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+ 
+}
+ul.features-list li:hover{
+
+  
+  background-color: #FAED26;   
+  border-radius: 2em;
+  
+}
+/**/
+
+/* Social media contacts sect. modification */
+.Social-media ul {
+
+  display: flex;
+  padding-top: 10px;
+} 
+
+.Social-media ul li {
+  padding-left: .5em;
+  padding-right: .5em;
+  margin: auto;
+
+  
+}
+/* From here  ContactUs block modifications */
+h2 {
+  justify-content: center;
+  font-size: 2em;
+  margin-left: 3%;
+}
+
+label {
+  justify-content: center;
+  display: flex;
+  padding: .8em;
+  margin:auto;
+  
+ 
+}
+/* input-Text blocks modifications */
+input, textarea {
+  justify-content: center;
+  display: flex;
+  padding: .9em;
+  margin:auto;
+  width: 92%;
+  border-radius:2em ;
+  
+
+}
+
+.send-message-cta2{
+  justify-content: center;
+  background-color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5em;
+  display:flex;
+  min-width:93%;
+  padding: .8em;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 15px;
+  
+å
+
+}
+
+/* Mobile menu mocifications */
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+  
+}
+/**/
+nav ul.primary-nav {
+  margin-top: 5em;
+  padding-left: 10%;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  margin-top: 0.9em;
+  font-size: 1.3em;
+  text-align: right;
+
+}
+/**/
+nav li a:hover {
+  font-weight: bold;
+}
+/* mobile menu: Exit button modifications */
+.mobile-menu-exit {
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+  width: 7%;
+}
+/**/
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.contact1 a{
+    margin: 0;
+  }
+  /* Premium button modificaitons */
+  .navbar nav li.premium-cta a {
+    color: #062928;
+    border: solid 3px #062928;
+    border-radius: 5em;
+    margin-top: 0.1em;
+  }
+  .navbar nav li.premium-cta a:hover {
+    background: #062928;
+    color: #FAED26;
+  }
+}
+
+
+@media only screen and (min-width:1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10 em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+.movie-list{
+
+  padding: 20px;
+  }
+  .main-list{
+    display: flex;
+    align-items:top;
+    height: 300px;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow: auto;
+
+  }
+  .list-item{
+
+    margin-right: 30px;
+    margin-left: 35px;
+    position: relative;
+    
+  }
+.list-item .item-image{
+  border-radius: 20px;
+  width: 280px;
+  height: 180px;
+  transition: all 0.8s ease-in-out;
+  
+  
+}
+.list-item:hover .item-image{
+  transform: scale(1.2);
+  margin: 0 10px;
+  opacity: 0.5;
+
+}
+.list-item .movie-title{
+  font-family:'Palatino';
+  color:antiquewhite;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  position:absolute;
+  top: 195px;
+  left: 10px;
+
+}
+.list-item .item-button{
+  font-family: 'Palatino';
+  font-size: larger;
+  padding: 10px;
+  font-weight: bold;
+  background-color:#800020;
+  color: antiquewhite;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 195px;
+  left: 115px;
+  opacity: 0;
+}
+.list-item:hover .item-button{
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+.movie-list .list-wrapper{
+  position: relative;
+  overflow: auto;
+}
+.icon{
+
+  font-size: 120px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  opacity: .5;
+  cursor: pointer;
+  outline: none;
+  
+  
+}
+.icon:hover{
+
+  color: #800020;
+}
+
+/*From Here Modifications for Movies Page*/
+
+.swiper {
+  margin: 20px;
+  width:100%;
+  height: 200px;
+  top: 20px;
+   
+}
+
+.swiper-slide {
+
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 20px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+ 
+  display:grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit:cover;
+  
+}
+
+
+
+
+ video{
+  max-width: 70%;
+  padding-left:200px;
+ }
+
+
+
+
+
+
+ 
 .navbar .mobile-menu {
   cursor: pointer;
   width: 28px;
