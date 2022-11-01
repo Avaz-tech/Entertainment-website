@@ -11,7 +11,7 @@
 
    
 </head>
- <body>
+ <body class="body-c  ">
    
     <!-- Navigation bar creation-->
     <div class="navbar"> 
@@ -29,7 +29,7 @@
                 </ul>
                 
                 <ul class="secondary-nav">
-                    <li class="current" class="contact1"><a href="contact.html">Contact</a></li>
+                    <li class="current" id="contact"><a href="contact.html">Contact</a></li>
                     <li class="premium-cta"><a href="premium.html">Get Premium</a></li>
 
                 </ul>
@@ -40,24 +40,29 @@
     </div>
 
         <!-- Creating Contact messaging block  -->
-           <h2>Leave Your Message..</h2>
-          <form class="contact_form" action="# ">
-            <label for="name">Name</label>
-            <input class="name" type="text" placeholder="Name">
+          <div id="overlay">
+            <form class="contact_form" action="https://formsubmit.co/avaz.ravshan1@gmail.com" method="POST">
+               <h1>Contact Us</h1>  
 
-            <label for="email">Email</label>
-            <input class="email" type="email"  placeholder="Email">
+               <label for="name">Name:</label>
+               <input type="text " id="name" name="name" placeholder="Your name">
+              
+               <label for="email">Email:</label>
+               <input type="text"  id="email" name="email" placeholder="Your email">
 
-            <label for="message">Your Message</label>
-            <textarea class="msg" cols="5" rows="5" placeholder="Your message"></textarea>
+               <label for="message">Message:</label>
+               <textarea id="message" name="message" placeholder="Your message" rows="5" ></textarea>
 
-            <button class="send-message-cta2" type="submit">Send</button>
+               <div class="center">
+                  <input type="submit" value="Send" >
 
-          </form> 
+               </div>
+            </form>
+          </div>
 
            <!-- Calling javascript files -->
-          <script src="https://smtpjs.com/v3/smtp.js"></script>
-          <script src="getMessage.js"></script>
+          <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+          <!-- <script src="getMessage.js"></script> -->
 
           <script>
             const mobileBtn = document.getElementById('mobile-cta');
