@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
@@ -11,26 +12,24 @@
 
     <!--  Swiper CSS -->
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-     <!-- Demo styles -->
-     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+
 
 </head>
+
 <body class="navbar">
     <!-- Navigation bar creation-->
-    <div class="navbar"> 
+    <div class="navbar">
         <div class="container">
             <a class="logo" href="#">A-<span>Movie</span></a>
 
-            <img id="mobile-cta"  class="mobile-menu" src="webfonts/bars-solid.svg" alt="Navigation">
-            
-             <nav>
+            <img id="mobile-cta" class="mobile-menu" src="webfonts/bars-solid.svg" alt="Navigation">
+
+            <nav>
                 <img id="mobile-exit" class="mobile-menu-exit" src="webfonts/xmark-solid.svg" alt="Exit">
                 <ul class="primary-nav">
-                    <li ><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="current"><a href="movies.html">Movies</a></li>
                     <li><a href="dramas.html">Dramas</a></li>
                 </ul>
@@ -38,17 +37,17 @@
                 <ul class="secondary-nav">
                     <li class="contact1"><a href="contact.html">Contact</a></li>
                     <li class="premium-cta"><a href="premium.html">Get Premium</a></li>
-                    
+
                 </ul>
 
-             </nav>
+            </nav>
         </div>
-       
-      </div>
 
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="movie/image/DoctorStrange2.jpeg" alt="">
             </div>
@@ -73,37 +72,37 @@
             <div class="swiper-slide">
                 <img src="movie/image/NoWayHome.jpeg" alt="">
             </div>
-           
-            
-            
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+
+
+
         </div>
-    
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    
-        <!-- Initialize Swiper -->
-        <script src="index.js"></script>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
-        <!-- Modifiying of menu button (Navigation bar elements) for Mobile version -->
- 
-        <script>
-             const mobileBtn = document.getElementById('mobile-cta');
-             nav = document.querySelector('nav');
-             mobileBtnExit = document.getElementById('mobile-exit');
- 
-             mobileBtn.addEventListener('click',() => {
-                 nav.classList.add('menu-btn');
-             })
- 
-             mobileBtnExit.addEventListener('click',() => {
-             nav.classList.remove('menu-btn');
-             })
-        </script>
-    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="index.js"></script>
+
+    <!-- Modifiying of menu button (Navigation bar elements) for Mobile version -->
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        nav = document.querySelector('nav');
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+    </script>
+
 </body>
-</html>
 
+</html>
