@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "scss": "^0.2.4"
-  }
+  },
+  "name": "a-movie",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avaz-tech/Entertainment-website.git"
+  },
+  "author": "Ben",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avaz-tech/Entertainment-website/issues"
+  },
+  "homepage": "https://github.com/Avaz-tech/Entertainment-website#readme",
+  "description": ""
 }
