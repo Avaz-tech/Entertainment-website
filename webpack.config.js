@@ -7,6 +7,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle[contenthash].js",
+    clean: true,
+  },
+  devtool: "source-map",
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000,
+    open: true,
+    hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
