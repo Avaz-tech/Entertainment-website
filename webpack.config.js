@@ -1,9 +1,24 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const pages = ["movies", "dramas", "contact", "premium"];
+const multipleHtmlPages = pages.map((page) => {
+  return new HtmlWebpackPlugin({
+    template: `src/pages/${page}.html`,
+    filename: `${page}.html`,
+    chunks: [`${page}`],
+  });
+});
+
 module.exports = {
   mode: "development",
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: {
+    index: path.resolve(__dirname, "src/js/index.js"),
+    movies: path.resolve(__dirname, "src/js/movies.js"),
+    dramas: path.resolve(__dirname, "src/js/dramas.js"),
+    contact: path.resolve(__dirname, "src/js/contact.js"),
+    premium: path.resolve(__dirname, "src/js/premium.js"),
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle[contenthash].js",
@@ -40,9 +55,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack App",
+      title: "A-Movie",
       filename: "index.html",
       template: "src/pages/home.html",
+      chunks: ["index"],
     }),
-  ],
+  ].concat(multipleHtmlPages),
 };
