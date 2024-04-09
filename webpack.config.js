@@ -23,6 +23,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle[contenthash].js",
     clean: true,
+    assetModuleFilename: "images/[name][ext]",
   },
   devtool: "source-map",
   devServer: {
@@ -50,6 +51,10 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
+        type: "asset/resource",
       },
     ],
   },
