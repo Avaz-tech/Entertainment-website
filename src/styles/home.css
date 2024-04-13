@@ -1,0 +1,13 @@
+.home {
+  color: var(--white);
+  background-image: url("../assets/images/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.home .headerbg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(34, 31, 31) 0%, rgba(34, 31, 31, 0.4) 100%);
+}/*# sourceMappingURL=home.css.map */

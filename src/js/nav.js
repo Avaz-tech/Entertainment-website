@@ -1,3 +1,4 @@
+import "../styles/nav.scss";
 document.addEventListener("DOMContentLoaded", function () {
   // Navbar container
   const navbarContainer = document.createElement("div");
