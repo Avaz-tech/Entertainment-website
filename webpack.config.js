@@ -19,7 +19,6 @@ module.exports = {
     dramas: path.resolve(__dirname, "src/js/dramas.js"),
     contact: path.resolve(__dirname, "src/js/contact.js"),
     premium: path.resolve(__dirname, "src/js/premium.js"),
-    premium: path.resolve(__dirname, "src/js/nav.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
