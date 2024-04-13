@@ -3,13 +3,13 @@ import "../styles/style.scss";
 const imageFiles1 = require.context(
   "../assets/images",
   true,
-  /\.(svg|png|jpg|jpeg|gif|webp)$/
+  /\.(svg|png|jpg|jpeg|gif|webp|ico)$/
 );
 const imagePaths1 = imageFiles1.keys();
 const imageFiles2 = require.context(
   "../assets/icons",
   true,
-  /\.(svg|png|jpg|jpeg|gif|webp)$/
+  /\.(svg|png|jpg|jpeg|gif|webp|ico)$/
 );
 const imagePaths2 = imageFiles2.keys();
 

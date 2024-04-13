@@ -7,6 +7,7 @@ const multipleHtmlPages = pages.map((page) => {
     template: `src/pages/${page}.html`,
     filename: `${page}.html`,
     chunks: [`${page}`],
+    favicon: "src/assets/icons/favicon.ico",
   });
 });
 
@@ -18,6 +19,7 @@ module.exports = {
     dramas: path.resolve(__dirname, "src/js/dramas.js"),
     contact: path.resolve(__dirname, "src/js/contact.js"),
     premium: path.resolve(__dirname, "src/js/premium.js"),
+    premium: path.resolve(__dirname, "src/js/nav.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -53,7 +55,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|ico)$/,
         type: "asset/resource",
       },
     ],
@@ -64,6 +66,7 @@ module.exports = {
       filename: "index.html",
       template: "src/pages/home.html",
       chunks: ["index"],
+      favicon: "src/assets/icons/favicon.ico",
     }),
   ].concat(multipleHtmlPages),
 };
