@@ -1,0 +1,66 @@
+// Header/Navbar styling
+// Common value declaration
+
+header .container {
+  // background-color: #171d22;
+  color: var(--white);
+  max-width: 95%;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+.navbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo-container {
+    img {
+      font-weight: bold;
+      color: var(--customYellow);
+      font-size: 40px;
+    }
+  }
+  .fa-bars {
+    display: none;
+  }
+  .nav-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .fa-search,
+    .fa-user {
+      font-size: 22px;
+      &:hover {
+        color: var(--customYellow);
+      }
+    }
+
+    button {
+      padding: 9px 12px;
+      border-color: var(--customYellow);
+      border-radius: 20px;
+      font-weight: bold;
+      color: var(--white);
+      background-color: transparent;
+    }
+  }
+}
+header nav ul {
+  display: inline-block;
+  font-size: 16px;
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    a {
+      color: var(--white);
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: var(--customYellow);
+      }
+    }
+    .active {
+      color: var(--customYellow);
+    }
+  }
+}

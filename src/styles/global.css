@@ -1,4 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.home {
+  color: var(--white);
+  background-image: url("../assets/images/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.home .headerbg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(34, 31, 31) 0%, rgba(34, 31, 31, 0.4) 100%);
+}
+
+header .container {
+  color: var(--white);
+  max-width: 95%;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.navbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-flex .logo-container img {
+  font-weight: bold;
+  color: var(--customYellow);
+  font-size: 40px;
+}
+.navbar-flex .fa-bars {
+  display: none;
+}
+.navbar-flex .nav-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar-flex .nav-toolbar .fa-search,
+.navbar-flex .nav-toolbar .fa-user {
+  font-size: 22px;
+}
+.navbar-flex .nav-toolbar .fa-search:hover,
+.navbar-flex .nav-toolbar .fa-user:hover {
+  color: var(--customYellow);
+}
+.navbar-flex .nav-toolbar button {
+  padding: 9px 12px;
+  border-color: var(--customYellow);
+  border-radius: 20px;
+  font-weight: bold;
+  color: var(--white);
+  background-color: transparent;
+}
+
+header nav ul {
+  display: inline-block;
+  font-size: 16px;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header nav ul li a {
+  color: var(--white);
+  transition: all 300ms ease-in-out;
+}
+header nav ul li a:hover {
+  color: var(--customYellow);
+}
+header nav ul li .active {
+  color: var(--customYellow);
+}
+
 :root {
   --customYellow: #e4d804;
   --blue: #1e90ff;
