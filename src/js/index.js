@@ -1,4 +1,5 @@
 import "../styles/global.scss";
+import "./nav";
 // Example of automated import script for images from multiple directories
 const imageFiles1 = require.context(
   "../assets/images",
