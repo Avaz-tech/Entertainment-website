@@ -1,4 +1,5 @@
-import "../styles/nav.scss";
+import "../styles/global.scss";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Navbar container
   const navbarContainer = document.createElement("div");
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logoImg = document.createElement("img");
   logoImg.src = ""; // Add your logo source here
-  logoImg.alt = "Logo";
+  logoImg.alt = "A-Movie";
 
   logoContainer.appendChild(logoImg);
 
@@ -27,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuItems = [
     { text: "Home", href: "index.html" },
     { text: "Movies", href: "movies.html" },
-    { text: "Tv Shows", href: "dramas.html" },
-    { text: "Video", href: "contact.html" },
-    { text: "Account", href: "premium.html" },
+    { text: "Tv Shows", href: "tvshows.html" },
+    { text: "Documentaries", href: "documentaries.html" },
+    { text: "Contact", href: "contact.html" },
   ];
 
   menuItems.forEach((item) => {
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Subscribe section
   const subscribeDiv = document.createElement("div");
-  subscribeDiv.classList.add("subscribe", "flex");
+  subscribeDiv.classList.add("nav-toolbar", "subscribe", "flex");
 
   const searchIcon = document.createElement("i");
   searchIcon.classList.add("fas", "fa-search");
@@ -84,12 +85,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle click event on navbar links
   function handleNavClick(event) {
     console.log("Click me");
-    // Remove 'active' class from all navbar links
+    // event.preventDefault();
     navLinks.forEach((link) => link.classList.remove("active"));
+
     // Add 'active' class to the clicked link
     this.classList.add("active");
+
+    localStorage.setItem("activeLink", this.getAttribute("href"));
   }
 
   // Add click event listener to each navbar link
-  navLinks.forEach((link) => link.addEventListener("click", handleNavClick));
+  navLinks.forEach((link) => {
+    link.addEventListener("click", handleNavClick);
+
+    const storedActiveLink = localStorage.getItem("activeLink");
+
+    if (link.getAttribute("href") === storedActiveLink) {
+      link.classList.add("active");
+    }
+  });
 });
