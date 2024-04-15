@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const pages = ["movies", "dramas", "contact", "premium"];
+const pages = ["movies", "tvshows", "documentaries", "contact"];
 const multipleHtmlPages = pages.map((page) => {
   return new HtmlWebpackPlugin({
     template: `src/pages/${page}.html`,
@@ -16,9 +16,9 @@ module.exports = {
   entry: {
     index: path.resolve(__dirname, "src/js/index.js"),
     movies: path.resolve(__dirname, "src/js/movies.js"),
-    dramas: path.resolve(__dirname, "src/js/dramas.js"),
+    tvshows: path.resolve(__dirname, "src/js/tvshows.js"),
+    documentaries: path.resolve(__dirname, "src/js/documentaries.js"),
     contact: path.resolve(__dirname, "src/js/contact.js"),
-    premium: path.resolve(__dirname, "src/js/premium.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
