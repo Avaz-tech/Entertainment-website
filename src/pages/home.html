@@ -13,15 +13,27 @@
       type="text/javascript"
       src="http://code.jquery.com/jquery-latest.js"
     ></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <!-- <script src="../js/index.js"></script> -->
   </head>
 
   <body>
     <!-- Navigation bar creation-->
-    <div class="navbar">
+    <section class="home">
+      <div class="headerbg">
+        <header id="header" class="header"></header>
+      </div>
+    </section>
+    <!-- <script>
+      $(function () {
+        $("#header").load("nav.html");
+      });
+    </script> -->
+
+    <!-- <div class="navbar">
       <div class="container">
         <a class="logo" href="#"
-          ><img src="images/A.png" alt="logo" /><span>Movie</span></a
+          ><img src="" alt="Logo" /><span>Movie</span></a
         >
 
         <img
@@ -54,10 +66,10 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </div> -->
 
     <!-- Movie -->
-    <div class="featured-conten">
+    <!-- <div class="featured-conten">
       <div class="container">
         <button class="featured-button" onclick="location.href='./dramas.html'">
           Watch
@@ -200,8 +212,8 @@
       </div>
     </div>
 
-    <!-- Creation of genre list of Movies -->
-    <section class="features-section">
+     Creation of genre list of Movies -->
+    <!-- <section class="features-section">
       <div class="contianer">
         <ul class="features-list">
           <li>Action</li>
@@ -214,10 +226,10 @@
           <li>Horror</li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- Social media Contact section -->
-    <section class="Social-media">
+    <!-- <section class="Social-media">
       <div class="conatianer">
         <ul>
           <li>
@@ -231,26 +243,25 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section>  -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- <script src="/src/services/getMessage.js"></script> -->
 
     <!-- Modifiying of menu button (Navigation bar elements) for Mobile version -->
     <script>
-      const mobileBtn = document.getElementById("mobile-cta");
-      nav = document.querySelector("nav");
-      mobileBtnExit = document.getElementById("mobile-exit");
+      // const mobileBtn = document.getElementById("mobile-cta");
+      // nav = document.querySelector("nav");
+      // mobileBtnExit = document.getElementById("mobile-exit");
 
-      mobileBtn.addEventListener("click", () => {
-        nav.classList.add("menu-btn");
-      });
+      // mobileBtn.addEventListener("click", () => {
+      //   nav.classList.add("menu-btn");
+      // });
 
-      mobileBtnExit.addEventListener("click", () => {
-        nav.classList.remove("menu-btn");
-      });
+      // mobileBtnExit.addEventListener("click", () => {
+      //   nav.classList.remove("menu-btn");
+      // });
     </script>
   </body>
 </html>
