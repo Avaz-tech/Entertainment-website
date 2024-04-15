@@ -10,8 +10,9 @@
 // Common value declaration
 :root {
   --customYellow: #e4d804;
-  --blue: #1e90ff;
-  --white: #ffffff;
+  --darkBg: #171d22;
+  --white: #fff;
+  --mainFont: "Poppins";
 }
 
 // All elements standart styling
@@ -27,8 +28,9 @@ html {
 }
 
 body {
+  background-color: var(--darkBg);
   margin: 0;
-  font-family: Poppins;
+  font-family: var(--mainFont);
   min-height: 100vh;
   transition: 0.5s;
 }
