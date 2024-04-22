@@ -14,5 +14,126 @@
       rgba(34, 31, 31, 1) 0%,
       rgba(34, 31, 31, 0.4) 100%
     );
+    .banner-wrapper {
+      width: 80%;
+      margin: auto;
+      padding: 10rem 0rem;
+      /* 6. Banner */
+
+      .banner {
+        font-size: 40px;
+        text-shadow: 0 5px 10px #0004;
+        .sub-title {
+          color: var(--customYellow);
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+        //  Banner content initial load animation
+        h1,
+        h2,
+        div,
+        .banner-btn {
+          transform: translateY(20px);
+          // filter: blur(20px);
+          opacity: 0;
+          animation: showBannerContent 1s linear 1 forwards;
+        }
+
+        @keyframes showBannerContent {
+          to {
+            opacity: 1;
+            // filter: blur(0);
+            transform: translateY(0);
+          }
+        }
+        h2 {
+          animation-delay: 0.5s;
+        }
+        h1 {
+          animation-delay: 0.7s;
+        }
+        div {
+          animation-delay: 0.9s;
+        }
+        .banner-btn {
+          animation-delay: 1.1s;
+        }
+
+        // End of initial load animation
+
+        .title {
+          span {
+            color: var(--customYellow);
+          }
+          font-size: 60px;
+          line-height: 1.2;
+          margin-bottom: 29px;
+        }
+        // .banner-btn {
+        //   .play-icon:hover {
+        //     transform: rotate(360deg);
+        //   }
+        // }
+      }
+
+      .banner-meta {
+        margin-bottom: 35px;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            margin-right: 18px;
+
+            &.quality > span {
+              font-size: 11px;
+              text-transform: uppercase;
+              color: #21232b;
+              background: #fff;
+              font-weight: 700;
+              padding: 7px 11px;
+              line-height: 1;
+              &:last-child {
+                background: transparent;
+                color: #fff;
+                margin-left: 9px;
+                border: 2px solid #fff;
+                padding: 5px 10px;
+              }
+            }
+            &.category {
+              display: flex;
+              gap: 5px;
+
+              > a {
+                font-size: var(--mainFontSize);
+                font-weight: 500;
+                color: #e3dfdf;
+                text-transform: none;
+                &:hover {
+                  color: var(--customYellow);
+                }
+              }
+            }
+            &.release-time {
+              display: flex;
+              gap: 1rem;
+              > span {
+                font-size: var(--mainFontSize);
+                font-weight: 500;
+                color: #e3dfdf;
+                > i {
+                  color: var(--customYellow);
+                  font-size: 12px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
