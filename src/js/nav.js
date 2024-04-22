@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   userIcon.classList.add("fas", "fa-user");
 
   const subscribeBtn = document.createElement("button");
+  subscribeBtn.classList.add("btn");
   subscribeBtn.textContent = "SUBSCRIBE";
 
   subscribeDiv.appendChild(searchIcon);

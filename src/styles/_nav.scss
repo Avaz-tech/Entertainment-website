@@ -4,9 +4,9 @@
 header .container {
   // background-color: #171d22;
   color: var(--white);
-  max-width: 95%;
+  max-width: 80%;
   margin: auto;
-  padding: 3rem 1rem;
+  padding: 3rem 0rem;
 }
 .navbar-flex {
   display: flex;
@@ -34,21 +34,11 @@ header .container {
         color: var(--customYellow);
       }
     }
-
-    button {
-      padding: 10px 24px;
-      border: 2px solid var(--customYellow);
-      border-radius: 50px;
-      font-weight: bold;
-      color: var(--white);
-      background-color: transparent;
-      font-family: inherit;
-    }
   }
 }
 header nav ul {
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--mainFontSize);
   li {
     display: inline-block;
     margin-right: 20px;

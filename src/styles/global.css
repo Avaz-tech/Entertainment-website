@@ -12,12 +12,90 @@
   height: 100vh;
   background: linear-gradient(to right, rgb(34, 31, 31) 0%, rgba(34, 31, 31, 0.4) 100%);
 }
+.home .headerbg .banner-wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 5rem 0rem;
+  /* 6. Banner */
+}
+.home .headerbg .banner-wrapper .banner {
+  font-size: 40px;
+}
+.home .headerbg .banner-wrapper .banner .sub-title {
+  color: var(--customYellow);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.home .headerbg .banner-wrapper .banner .title {
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 29px;
+}
+.home .headerbg .banner-wrapper .banner .title span {
+  color: var(--customYellow);
+}
+.home .headerbg .banner-wrapper .banner-meta {
+  margin-bottom: 35px;
+}
+.home .headerbg .banner-wrapper .banner-meta ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-right: 18px;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.quality > span {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #21232b;
+  background: #fff;
+  font-weight: 700;
+  padding: 7px 11px;
+  line-height: 1;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.quality > span:last-child {
+  background: transparent;
+  color: #fff;
+  margin-left: 9px;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.category {
+  display: flex;
+  gap: 5px;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.category > a {
+  font-size: var(--mainFontSize);
+  font-weight: 500;
+  color: #e3dfdf;
+  text-transform: none;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.category > a:hover {
+  color: var(--customYellow);
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.release-time {
+  display: flex;
+  gap: 1rem;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.release-time > span {
+  font-size: var(--mainFontSize);
+  font-weight: 500;
+  color: #e3dfdf;
+}
+.home .headerbg .banner-wrapper .banner-meta ul li.release-time > span > i {
+  color: var(--customYellow);
+  font-size: 12px;
+  margin-right: 5px;
+}
 
 header .container {
   color: var(--white);
-  max-width: 95%;
+  max-width: 80%;
   margin: auto;
-  padding: 3rem 1rem;
+  padding: 3rem 0rem;
 }
 
 .navbar-flex {
@@ -28,7 +106,7 @@ header .container {
 .navbar-flex .logo-container img {
   font-weight: bold;
   color: var(--customYellow);
-  font-size: 40px;
+  font-size: 30px;
 }
 .navbar-flex .fa-bars {
   display: none;
@@ -36,28 +114,20 @@ header .container {
 .navbar-flex .nav-toolbar {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 .navbar-flex .nav-toolbar .fa-search,
 .navbar-flex .nav-toolbar .fa-user {
-  font-size: 22px;
+  font-size: 17px;
 }
 .navbar-flex .nav-toolbar .fa-search:hover,
 .navbar-flex .nav-toolbar .fa-user:hover {
   color: var(--customYellow);
 }
-.navbar-flex .nav-toolbar button {
-  padding: 9px 12px;
-  border-color: var(--customYellow);
-  border-radius: 20px;
-  font-weight: bold;
-  color: var(--white);
-  background-color: transparent;
-}
 
 header nav ul {
   display: inline-block;
-  font-size: 16px;
+  font-size: var(--mainFontSize);
 }
 header nav ul li {
   display: inline-block;
@@ -76,8 +146,10 @@ header nav ul li .active {
 
 :root {
   --customYellow: #e4d804;
-  --blue: #1e90ff;
-  --white: #ffffff;
+  --darkBg: #171d22;
+  --white: #fff;
+  --mainFont: "Poppins";
+  --mainFontSize: 14px;
 }
 
 * {
@@ -91,10 +163,15 @@ html {
 }
 
 body {
+  background-color: var(--darkBg);
   margin: 0;
-  font-family: Poppins;
-  min-height: 100vh;
+  font-family: var(--mainFont);
+  min-height: s 100vh;
   transition: 0.5s;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 ul {
@@ -111,4 +188,39 @@ a {
 i {
   cursor: pointer;
   transition: 0.5s;
+}
+
+.btn {
+  font-family: inherit;
+  -webkit-user-select: none;
+          user-select: none;
+  -moz-user-select: none;
+  background: #12151e none repeat scroll 0 0;
+  border: 2px solid var(--customYellow);
+  border-radius: 50px;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 10px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.btn:hover {
+  background-color: var(--customYellow);
+  color: var(--darkBg);
+}
+
+.btn > i {
+  margin-right: 7px;
 }/*# sourceMappingURL=global.css.map */
