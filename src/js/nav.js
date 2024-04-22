@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logoImg = document.createElement("img");
   logoImg.src = ""; // Add your logo source here
-  logoImg.alt = "A-Movie";
+  logoImg.alt = "AMovie";
 
   logoContainer.appendChild(logoImg);
 

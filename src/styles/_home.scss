@@ -21,12 +21,14 @@
       /* 6. Banner */
 
       .banner {
-        font-size: 40px;
+        font-size: 100%;
         text-shadow: 0 5px 10px #0004;
         .sub-title {
           color: var(--customYellow);
-          font-size: 26px;
+          font-size: 1.5em;
           margin-bottom: 10px;
+          letter-spacing: 4px;
+          text-transform: uppercase;
         }
         //  Banner content initial load animation
         h1,
@@ -65,7 +67,7 @@
           span {
             color: var(--customYellow);
           }
-          font-size: 60px;
+          font-size: 4em;
           line-height: 1.2;
           margin-bottom: 29px;
         }
