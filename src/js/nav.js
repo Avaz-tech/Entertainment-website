@@ -86,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const clonedNav = nav.cloneNode(true);
   mobileNavContainer.appendChild(clonedNav);
 
+  const mobileNavBackdrop = document.createElement("div");
+  mobileNavBackdrop.classList.add("mobile-nav-backdrop");
+  subscribeDiv.appendChild(mobileNavBackdrop);
+
   subscribeDiv.appendChild(mobileNavContainer);
 
   // Assemble the navbar
@@ -125,15 +129,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  const mobileNavBackdropInstance = document.querySelector(
+    ".mobile-nav-backdrop"
+  );
   const mobileNavContainerInstance = document.querySelector(
     ".mobile-menu-container"
   );
+
   const hamburgerIconInstance = document.querySelector(".fa-bars");
 
   hamburgerIconInstance.addEventListener("click", function () {
-    console.log("-----");
     mobileNavContainerInstance.classList.remove("mobile-nav-closed");
     mobileNavContainerInstance.classList.add("mobile-nav-open");
+    mobileNavBackdropInstance.classList.add("visible");
   });
   // Add event listener to mobile nav close icon
 
@@ -141,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closeIconMobileNav.addEventListener("click", function () {
     mobileNavContainerInstance.classList.remove("mobile-nav-open");
+    mobileNavBackdropInstance.classList.remove("visible");
     mobileNavContainerInstance.classList.add("mobile-nav-closed");
   });
 });
