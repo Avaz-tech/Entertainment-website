@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nav.appendChild(menuList);
 
   // Hamburger icon
-  const hamburgerIcon = document.createElement("span");
+  const hamburgerIcon = document.createElement("i");
   hamburgerIcon.classList.add("fa", "fa-bars");
 
   // Subscribe section
@@ -57,21 +57,41 @@ document.addEventListener("DOMContentLoaded", function () {
   searchIcon.classList.add("fas", "fa-search");
 
   const userIcon = document.createElement("i");
-  userIcon.id = "palybtn"; // assuming this is a typo and should be "playbtn" instead of "palybtn"
+  userIcon.id = "playbtn";
   userIcon.classList.add("fas", "fa-user");
 
   const subscribeBtn = document.createElement("button");
-  subscribeBtn.classList.add("btn");
+  subscribeBtn.classList.add("btn", "subscribe-btn");
   subscribeBtn.textContent = "SUBSCRIBE";
 
   subscribeDiv.appendChild(searchIcon);
   subscribeDiv.appendChild(userIcon);
   subscribeDiv.appendChild(subscribeBtn);
+  subscribeDiv.appendChild(hamburgerIcon);
+
+  const mobileNavContainer = document.createElement("div");
+  mobileNavContainer.classList.add("mobile-menu-container");
+  mobileNavContainer.classList.add("mobile-nav-closed");
+  const mobileMenuHeader = document.createElement("div");
+  mobileMenuHeader.classList.add("mob-menu-header");
+  const cloneLogoContainer = logoContainer.cloneNode(true);
+  mobileMenuHeader.appendChild(cloneLogoContainer);
+  const closeIcon = document.createElement("i");
+  closeIcon.classList.add("close-icon", "fa", "fa-close");
+  closeIcon.id = "close-icon-mobile-nav";
+  mobileMenuHeader.appendChild(closeIcon);
+
+  mobileNavContainer.appendChild(mobileMenuHeader);
+
+  const clonedNav = nav.cloneNode(true);
+  mobileNavContainer.appendChild(clonedNav);
+
+  subscribeDiv.appendChild(mobileNavContainer);
 
   // Assemble the navbar
   navbarFlex.appendChild(logoContainer);
   navbarFlex.appendChild(nav);
-  navbarFlex.appendChild(hamburgerIcon);
+
   navbarFlex.appendChild(subscribeDiv);
 
   navbarContainer.appendChild(navbarFlex);
@@ -85,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to handle click event on navbar links
   function handleNavClick(event) {
-    console.log("Click me");
     // event.preventDefault();
     navLinks.forEach((link) => link.classList.remove("active"));
 
@@ -104,5 +123,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (link.getAttribute("href") === storedActiveLink) {
       link.classList.add("active");
     }
+  });
+
+  const mobileNavContainerInstance = document.querySelector(
+    ".mobile-menu-container"
+  );
+  const hamburgerIconInstance = document.querySelector(".fa-bars");
+
+  hamburgerIconInstance.addEventListener("click", function () {
+    console.log("-----");
+    mobileNavContainerInstance.classList.remove("mobile-nav-closed");
+    mobileNavContainerInstance.classList.add("mobile-nav-open");
+  });
+  // Add event listener to mobile nav close icon
+
+  const closeIconMobileNav = document.getElementById("close-icon-mobile-nav");
+
+  closeIconMobileNav.addEventListener("click", function () {
+    mobileNavContainerInstance.classList.remove("mobile-nav-open");
+    mobileNavContainerInstance.classList.add("mobile-nav-closed");
   });
 });

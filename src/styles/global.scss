@@ -1,3 +1,41 @@
+/* Screen size breakpoints */
+$breakpoint-mobile: 576px; /* Small mobile devices */
+$breakpoint-tablet-portrait: 768px; /* Portrait mode tablets */
+$breakpoint-tablet-landscape: 1024px; /* Landscape mode tablets */
+$breakpoint-desktop: 1280px; /* Standard desktops */
+$breakpoint-large-desktop: 1440px; /* Large desktops */
+
+@mixin legacyMobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+@mixin premiumMobile {
+  @media (max-width: $breakpoint-tablet-portrait) {
+    @content;
+  }
+}
+@mixin tabletPortrait {
+  @media (max-width: $breakpoint-tablet-landscape) {
+    @content;
+  }
+}
+@mixin tabletLandscape {
+  @media (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: $breakpoint-large-desktop) {
+    @content;
+  }
+}
+// @mixin largeDesktop {
+//   @media (min-width: $breakpoint-large-desktop) {
+//     @content;
+//   }
+// }
+
 // @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "home";
@@ -35,8 +73,9 @@ body {
   min-height: s 100vh;
   transition: 0.5s;
 }
+
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 ul {
@@ -80,8 +119,15 @@ i {
 }
 .btn:hover {
   background-color: var(--customYellow);
+  i {
+    color: var(--darkBg);
+  }
   color: var(--darkBg);
 }
 .btn > i {
   margin-right: 7px;
+}
+img {
+  max-width: 100%;
+  display: block;
 }

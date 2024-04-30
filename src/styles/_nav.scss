@@ -4,9 +4,12 @@
 header .container {
   // background-color: #171d22;
   color: var(--white);
-  max-width: 80%;
+  width: 80%;
   margin: auto;
   padding: 3rem 0rem;
+  @include tabletLandscape {
+    width: 90%;
+  }
 }
 .navbar-flex {
   display: flex;
@@ -23,6 +26,13 @@ header .container {
   }
   .fa-bars {
     display: none;
+    @include tabletLandscape {
+      display: block;
+      cursor: pointer;
+      &:hover {
+        color: var(--customYellow);
+      }
+    }
   }
   .nav-toolbar {
     display: flex;
@@ -35,6 +45,74 @@ header .container {
       &:hover {
         color: var(--customYellow);
       }
+    }
+    .subscribe-btn {
+      @include tabletLandscape {
+        display: none;
+      }
+    }
+    //mobile menu styling
+
+    .mobile-menu-container {
+      width: 300px;
+      max-width: 100%;
+      height: 100%;
+      display: none;
+      position: fixed;
+      right: 0;
+      top: 0;
+      background-color: var(--darkBg);
+
+      @include tabletLandscape {
+        display: flex;
+        flex-direction: column;
+
+        nav {
+          display: flex;
+          ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            li {
+              border-top: 1px solid rgb(255 255 255 / 10%);
+              margin-right: 0;
+              a {
+                padding: 10px 25px;
+                line-height: 24px;
+                font-size: 15px;
+                position: relative;
+                display: block;
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+      .mob-menu-header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 25px;
+        .logo-container {
+          img {
+            font-size: 24px;
+          }
+        }
+        .close-icon {
+          font-size: 20px;
+        }
+      }
+    }
+    .mobile-nav-open {
+      transition: 0.6s;
+      transform: translateX(0%);
+    }
+    .mobile-nav-closed {
+      transition: 0.6s;
+      transform: translateX(101%);
+      opacity: 0;
     }
   }
 }
@@ -55,5 +133,8 @@ header nav ul {
     .active {
       color: var(--customYellow);
     }
+  }
+  @include tabletLandscape {
+    display: none;
   }
 }
