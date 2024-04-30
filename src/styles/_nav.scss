@@ -62,6 +62,7 @@ header .container {
       right: 0;
       top: 0;
       background-color: var(--darkBg);
+      z-index: 99;
 
       @include tabletLandscape {
         display: flex;
