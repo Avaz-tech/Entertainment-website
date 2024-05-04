@@ -52,6 +52,8 @@ $breakpoint-large-desktop: 1440px; /* Large desktops */
   --white: #fff;
   --mainFont: "Poppins";
   --mainFontSize: 14px;
+  --buttonBg: #20212b;
+  --darkBorder: #2d303d;
 }
 
 // All elements standart styling
@@ -128,6 +130,6 @@ i {
   margin-right: 7px;
 }
 img {
-  max-width: 100%;
+  // max-width: 100%;
   display: block;
 }
