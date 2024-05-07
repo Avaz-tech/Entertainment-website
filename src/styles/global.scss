@@ -4,6 +4,7 @@ $breakpoint-tablet-portrait: 768px; /* Portrait mode tablets */
 $breakpoint-tablet-landscape: 1024px; /* Landscape mode tablets */
 $breakpoint-desktop: 1280px; /* Standard desktops */
 $breakpoint-large-desktop: 1440px; /* Large desktops */
+$breakpoint-very-large-desktop: 1600px; /* Screens which are much more larger than regular dekstop */
 
 @mixin legacyMobile {
   @media (max-width: $breakpoint-mobile) {
@@ -30,11 +31,11 @@ $breakpoint-large-desktop: 1440px; /* Large desktops */
     @content;
   }
 }
-// @mixin largeDesktop {
-//   @media (min-width: $breakpoint-large-desktop) {
-//     @content;
-//   }
-// }
+@mixin veryLargeDesktop {
+  @media (min-width: $breakpoint-very-large-desktop) {
+    @content;
+  }
+}
 
 // @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
