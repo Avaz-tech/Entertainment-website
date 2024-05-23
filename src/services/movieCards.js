@@ -1,7 +1,11 @@
+let url = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+
+const moviesBtn = document.getElementById("movies-btn");
+const tvshowsBtn = document.getElementById("tvshows-btn");
+const documentariesBtn = document.getElementById("documentaries-btn");
+
 // Function to fetch movie data from API
 async function fetchMovieData() {
-  const url =
-    "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
   // const options = {
   //   method: "GET",
   //   headers: {
@@ -22,10 +26,10 @@ async function fetchMovieData() {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
-    return data;
+     return data;
   } catch (error) {
     console.error("Error fetching movie data:", error);
-    return []; // Return empty array in case of error
+     return []; // Return empty array in case of error
   }
 }
 
@@ -34,7 +38,9 @@ async function updateMovieCards() {
   const baseUrl = "https://image.tmdb.org/t/p/w500";
   const movieData = await fetchMovieData();
   const movieDataPart = document.querySelector(".movie-data-part");
-  const swiperCardImages = document.querySelectorAll(".swiper-card-image");
+
+  // Clear existing movie cards
+  movieDataPart.innerHTML = "";
 
   console.log(movieData);
   // Iterate through movie data and update each card
@@ -49,9 +55,9 @@ async function updateMovieCards() {
       movie.poster_path
     }" alt="movie-img" class="movie-img" />
         <div class="movie-details">
-          <title class="movie-title">${movie.title}</title>
+          <title class="movie-title">${movie.title || movie.name}</title>
           <span class="movie-year">${
-            movie.release_date ? movie.release_date : "Upcoming"
+            movie.release_date || movie.first_air_date || "Upcoming"
           }</span>
         </div>
         <div class="movie-info">
@@ -69,5 +75,20 @@ async function updateMovieCards() {
 
 // Call the function to populate movie cards
 document.addEventListener("DOMContentLoaded", function () {
+  moviesBtn.addEventListener("click", function () {
+    url =
+      "https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc";
+    updateMovieCards();
+  });
+  tvshowsBtn.addEventListener("click", function () {
+    url = "https://api.themoviedb.org/3/trending/tv/day?language=en-US&page=1";
+    updateMovieCards();
+  });
+
+  documentariesBtn.addEventListener("click", function () {
+    url = "https://api.themoviedb.org/3/tv/on_the_air?language=en-US&page=1";
+    updateMovieCards();
+  });
+
   updateMovieCards();
 });

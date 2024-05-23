@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignore build output directory
-dist/
+# dist/
 
 # Ignore environment configuration file
 .env
