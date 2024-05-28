@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var logoContainer = document.createElement("div");
   logoContainer.classList.add("logo-container");
   var logoImg = document.createElement("img");
-  logoImg.src = ""; // Add your logo source here
-  logoImg.alt = "AMovie";
+  logoImg.src = "dist/images/favicon.png";
+  console.log("Image....", logoImg.src);
+  logoImg.alt = "Uflicks";
   logoContainer.appendChild(logoImg);
 
   // Navigation
@@ -1299,4 +1300,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundled15d7460706aa609d6b7.js.map
+//# sourceMappingURL=bundle2e3f24f06e86bb1d4d3a.js.map

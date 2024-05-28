@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var logoContainer = document.createElement("div");
   logoContainer.classList.add("logo-container");
   var logoImg = document.createElement("img");
-  logoImg.src = ""; // Add your logo source here
-  logoImg.alt = "AMovie";
+  logoImg.src = "dist/images/favicon.png";
+  console.log("Image....", logoImg.src);
+  logoImg.alt = "Uflicks";
   logoContainer.appendChild(logoImg);
 
   // Navigation
@@ -1287,9 +1288,9 @@ module.exports = styleTagTransform;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*********************************!*\
-  !*** ./src/js/documentaries.js ***!
-  \*********************************/
+/*!**************************!*\
+  !*** ./src/js/movies.js ***!
+  \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/global.scss */ "./src/styles/global.scss");
 /* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ "./src/js/nav.js");
@@ -1299,4 +1300,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle53a3ade03312b4b58b4e.js.map
+//# sourceMappingURL=bundle6f861454ee1574971994.js.map
