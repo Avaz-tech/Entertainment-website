@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   logoContainer.classList.add("logo-container");
 
   const logoImg = document.createElement("img");
-  logoImg.src = ""; // Add your logo source here
-  logoImg.alt = "AMovie";
+  logoImg.classList.add("logo");
+  const logoText = document.createElement("span");
+  logoText.textContent = "Uflicks";
 
   logoContainer.appendChild(logoImg);
+  logoContainer.appendChild(logoText);
+  logoText.classList.add("logo-text");
 
   // Navigation
   const nav = document.createElement("nav");
