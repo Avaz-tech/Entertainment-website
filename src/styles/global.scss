@@ -137,3 +137,45 @@ img {
   // max-width: 100%;
   display: block;
 }
+
+//Not Found Banner styles
+.not-found-section {
+  height: 100vh;
+  width: 100%;
+  .not-found-banner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    div:first-child {
+      img {
+        content: url("../assets/images/notfound.svg");
+        width: 100%;
+        max-width: 700px;
+      }
+    }
+    .page-not-found-txt {
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--white);
+    }
+    div:nth-child(3) {
+      button {
+        padding: 15px 20px;
+        font-size: 20px;
+        // font-weight: bold;
+        font-family: var(--logoFont);
+        cursor: pointer;
+        color: var(--white);
+        background-color: var(--customYellow);
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 3px 4px 0px rgba(30, 30, 30, 0.17);
+      }
+    }
+  }
+}
