@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var logoContainer = document.createElement("div");
   logoContainer.classList.add("logo-container");
   var logoImg = document.createElement("img");
-  logoImg.src = "dist/images/favicon.png";
-  console.log("Image....", logoImg.src);
-  logoImg.alt = "Uflicks";
+  logoImg.classList.add("logo");
+  var logoText = document.createElement("span");
+  logoText.textContent = "Uflicks";
   logoContainer.appendChild(logoImg);
+  logoContainer.appendChild(logoText);
+  logoText.classList.add("logo-text");
 
   // Navigation
   var nav = document.createElement("nav");
@@ -147,6 +149,13 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileNavBackdropInstance.classList.remove("visible");
     mobileNavContainerInstance.classList.add("mobile-nav-closed");
   });
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 });
 
 /***/ }),
@@ -165,11 +174,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/logo.png */ "./src/assets/images/logo.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Screen size breakpoints */
 /* Small mobile devices */
@@ -180,7 +195,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Screen size breakpoints */
 /* Screens which are much more larger than regular dekstop */
 .home {
   color: var(--white);
-  background-image: url("https://image.tmdb.org/t/p/original/kYgQzzjNis5jJalYtIHgrom0gOx.jpg");
+  background-image: url("https://image.tmdb.org/t/p/original/1m1rXopfNDVL3UMiv6kriYaJ3yE.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
@@ -406,7 +421,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Screen size breakpoints */
 .latest-movies-section .content-container .movie-data-part {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: baseline;
+  align-items: stretch;
   justify-items: center;
   gap: 2rem;
 }
@@ -434,14 +449,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Screen size breakpoints */
   border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   width: 100%;
-  max-width: 300px;
-  max-height: 420px;
+  max-width: 450px;
+  max-height: 565px;
   object-fit: cover;
 }
 @media (max-width: 1024px) {
   .latest-movies-section .content-container .movie-data-part .movie-card img {
-    max-width: 350px;
-    max-height: 470px;
+    max-width: 400px;
+    max-height: 515px;
   }
 }
 @media (max-width: 768px) {
@@ -524,11 +539,60 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* Screen size breakpoints */
   color: #e3dfdf;
 }
 
+.emailing-section {
+  width: 100%;
+  margin: auto;
+  padding: 50px 3%;
+  background-color: var(--customYellow);
+  display: flex;
+  justify-content: center;
+}
+.emailing-section .emailing-area {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.emailing-section .emailing-area .content h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.emailing-section .emailing-area .content p {
+  font-size: 14px;
+}
+.emailing-section .emailing-area .email-box {
+  background-color: transparent;
+}
+.emailing-section .emailing-area .email-box input {
+  padding: 17px 30px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 3px 4px 0px rgba(30, 30, 30, 0.17);
+  border-radius: 4px;
+  outline: none;
+}
+.emailing-section .emailing-area .email-box button {
+  padding: 17px 30px;
+  background-color: var(--darkBg);
+  box-shadow: 0px 3px 4px 0px rgba(30, 30, 30, 0.17);
+  border-radius: 4px;
+  color: var(--customYellow);
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  transition: background-color 0.3s;
+  z-index: 99;
+}
 header .container {
   color: var(--white);
   width: 80%;
   margin: auto;
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
 }
 @media (max-width: 1280px) {
   header .container {
@@ -536,17 +600,33 @@ header .container {
   }
 }
 
+.scrolled {
+  background-color: var(--darkBg);
+}
+
 .navbar-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.navbar-flex .logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 1rem;
+}
 .navbar-flex .logo-container img {
   font-weight: bold;
   color: var(--customYellow);
+  width: 55px;
   font-size: 30px;
   letter-spacing: 4px;
   text-transform: uppercase;
+  content: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+.navbar-flex .logo-container .logo-text {
+  font-family: var(--logoFont);
+  font-size: 35px;
 }
 .navbar-flex .fa-bars {
   display: none;
@@ -686,6 +766,7 @@ header nav ul li .active {
   --mainFontSize: 14px;
   --buttonBg: #20212b;
   --darkBorder: #2d303d;
+  --logoFont: "Hammersmith One", sans-serif;
 }
 
 * {
@@ -765,7 +846,7 @@ i {
 
 img {
   display: block;
-}`, "",{"version":3,"sources":["webpack://./src/styles/global.scss","webpack://./src/styles/_home.scss","webpack://./src/styles/_nav.scss"],"names":[],"mappings":"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","sourcesContent":["/* Screen size breakpoints */\n$breakpoint-mobile: 576px; /* Small mobile devices */\n$breakpoint-tablet-portrait: 768px; /* Portrait mode tablets */\n$breakpoint-tablet-landscape: 1024px; /* Landscape mode tablets */\n$breakpoint-desktop: 1280px; /* Standard desktops */\n$breakpoint-large-desktop: 1440px; /* Large desktops */\n$breakpoint-very-large-desktop: 1600px; /* Screens which are much more larger than regular dekstop */\n\n@mixin legacyMobile {\n  @media (max-width: $breakpoint-mobile) {\n    @content;\n  }\n}\n@mixin premiumMobile {\n  @media (max-width: $breakpoint-tablet-portrait) {\n    @content;\n  }\n}\n@mixin tabletPortrait {\n  @media (max-width: $breakpoint-tablet-landscape) {\n    @content;\n  }\n}\n@mixin tabletLandscape {\n  @media (max-width: $breakpoint-desktop) {\n    @content;\n  }\n}\n@mixin desktop {\n  @media (max-width: $breakpoint-large-desktop) {\n    @content;\n  }\n}\n@mixin veryLargeDesktop {\n  @media (min-width: $breakpoint-very-large-desktop) {\n    @content;\n  }\n}\n\n// @import url(\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\");\n@import \"home\";\n@import \"movies\";\n@import \"tvshows\";\n@import \"contact\";\n@import \"documentaries\";\n@import \"nav\";\n\n// Common value declaration\n:root {\n  --customYellow: #e4d804;\n  --darkBg: #171d22;\n  --white: #fff;\n  --mainFont: \"Poppins\";\n  --mainFontSize: 14px;\n  --buttonBg: #20212b;\n  --darkBorder: #2d303d;\n}\n\n// All elements standart styling\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\n// html initial height setting\nhtml {\n  min-height: 100vh;\n}\n\nbody {\n  background-color: var(--darkBg);\n  margin: 0;\n  font-family: var(--mainFont);\n  min-height: s 100vh;\n  transition: 0.5s;\n}\n\nh1 {\n  font-size: 3em;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n  transition: 0.5s;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n\ni {\n  cursor: pointer;\n  transition: 0.5s;\n}\n.btn {\n  font-family: inherit;\n  user-select: none;\n  -moz-user-select: none;\n  background: #12151e none repeat scroll 0 0;\n  border: 2px solid var(--customYellow);\n  border-radius: 50px;\n  color: var(--white);\n  cursor: pointer;\n  display: inline-block;\n  font-size: 12px;\n  font-weight: 700;\n  letter-spacing: 1px;\n  line-height: 1.5;\n  margin-bottom: 0;\n  padding: 10px 24px;\n  text-align: center;\n  text-transform: uppercase;\n  touch-action: manipulation;\n  transition: all 0.3s ease 0s;\n  vertical-align: middle;\n  white-space: nowrap;\n  max-width: 200px;\n}\n.btn:hover {\n  background-color: var(--customYellow);\n  i {\n    color: var(--darkBg);\n  }\n  color: var(--darkBg);\n}\n.btn > i {\n  margin-right: 7px;\n}\nimg {\n  // max-width: 100%;\n  display: block;\n}\n","//------- Section 1 -----------\n.home {\n  color: var(--white);\n  background-image: url(\"https://image.tmdb.org/t/p/original/kYgQzzjNis5jJalYtIHgrom0gOx.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 80vh;\n  width: 100%;\n  .headerbg {\n    width: 100%;\n    height: 100vh;\n    background: linear-gradient(\n      to right,\n      rgba(34, 31, 31, 1) 0%,\n      rgba(34, 31, 31, 0.4) 100%\n    );\n    .banner-wrapper {\n      width: 80%;\n      margin: auto;\n      padding: 10rem 0rem;\n      @include tabletLandscape {\n        width: 90%;\n      }\n      /* 6. Banner */\n\n      .banner {\n        font-size: 100%;\n        text-shadow: 0 5px 10px #0004;\n        .sub-title {\n          color: var(--customYellow);\n          font-size: 1.5em;\n          margin-bottom: 10px;\n          letter-spacing: 4px;\n          text-transform: uppercase;\n        }\n        //  Banner content initial load animation\n        h1,\n        h2,\n        div,\n        .banner-btn {\n          transform: translateY(20px);\n          // filter: blur(20px);\n          opacity: 0;\n          animation: showBannerContent 1s linear 1 forwards;\n        }\n\n        @keyframes showBannerContent {\n          to {\n            opacity: 1;\n            // filter: blur(0);\n            transform: translateY(0);\n          }\n        }\n        h2 {\n          animation-delay: 0.5s;\n        }\n        h1 {\n          animation-delay: 0.7s;\n        }\n        div {\n          animation-delay: 0.9s;\n        }\n        .banner-btn {\n          animation-delay: 1.1s;\n        }\n\n        // End of initial load animation\n\n        .title {\n          span {\n            color: var(--customYellow);\n          }\n          font-size: clamp(24px, 3vw + 1rem, 60px);\n          line-height: 1.2;\n          margin-bottom: 29px;\n        }\n        // .banner-btn {\n        //   .play-icon:hover {\n        //     transform: rotate(360deg);\n        //   }\n        // }\n      }\n\n      .banner-meta {\n        margin-bottom: 35px;\n        ul {\n          display: flex;\n          flex-wrap: wrap;\n          li {\n            display: flex;\n            align-items: center;\n            margin-bottom: 15px;\n            margin-right: 18px;\n\n            &.quality > span {\n              font-size: 11px;\n              text-transform: uppercase;\n              color: #21232b;\n              background: #fff;\n              font-weight: 700;\n              padding: 7px 11px;\n              line-height: 1;\n              &:last-child {\n                background: transparent;\n                color: #fff;\n                margin-left: 9px;\n                border: 2px solid #fff;\n                padding: 5px 10px;\n              }\n            }\n            &.category {\n              display: flex;\n              gap: 5px;\n\n              > a {\n                font-size: var(--mainFontSize);\n                font-weight: 500;\n                color: #e3dfdf;\n                text-transform: none;\n                &:hover {\n                  color: var(--customYellow);\n                }\n              }\n            }\n            &.release-time {\n              display: flex;\n              gap: 1rem;\n              > span {\n                font-size: var(--mainFontSize);\n                font-weight: 500;\n                color: #e3dfdf;\n                > i {\n                  color: var(--customYellow);\n                  font-size: 12px;\n                  margin-right: 5px;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n// Section 2 - Latest movies section\n.latest-movies-section {\n  display: flex;\n  min-height: 840px;\n  max-width: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--darkBg);\n  .content-container {\n    width: 80%;\n    margin: auto;\n    padding: 4rem 0rem;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    @include veryLargeDesktop {\n      width: 90%;\n    }\n    @include legacyMobile {\n      width: 90%;\n    }\n    .content-header-part {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      justify-content: space-between;\n      padding: 3rem 0;\n      gap: 1rem;\n      @include tabletPortrait {\n        flex-direction: column;\n        align-items: center;\n      }\n\n      h2 {\n        color: var(--white);\n        font-size: 36px;\n        text-wrap: nowrap;\n      }\n      .content-type-buttons {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        gap: 1rem;\n        @include legacyMobile {\n          flex-wrap: wrap;\n        }\n        button {\n          border: 2px solid var(--darkBorder);\n          background-color: var(--darkBg);\n          &:hover {\n            border-color: var(--customYellow);\n            color: var(--white);\n          }\n        }\n        .swiper-buttons {\n          display: flex;\n          flex-direction: row;\n          border: 2px solid var(--darkBorder);\n          background-color: var(--darkBg);\n          border-radius: 20px;\n          @include tabletPortrait {\n            display: none;\n          }\n          &:hover {\n            border-color: var(--customYellow);\n          }\n          .left-slide,\n          .right-slide {\n            height: 100%;\n            width: 100%;\n            background-color: transparent;\n            border: none;\n            color: var(--white);\n          }\n          .left-slide {\n            padding: 10px 8px 10px 24px;\n            border-radius: 20px 0px 0px 20px;\n          }\n          .right-slide {\n            padding: 10px 24px 10px 8px;\n            border-radius: 0px 20px 20px 0px;\n          }\n          span {\n            border-left: 2px solid var(--darkBorder);\n            margin: 10px;\n          }\n        }\n      }\n    }\n\n    // ----------------------------\n\n    .movie-data-part {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      align-items: baseline;\n      justify-items: center;\n      gap: 2rem;\n      @include desktop {\n        grid-template-columns: repeat(3, 1fr);\n      }\n      @include tabletPortrait {\n        grid-template-columns: repeat(2, 1fr);\n      }\n      @include premiumMobile {\n        grid-template-columns: repeat(1, 1fr);\n      }\n      .movie-card {\n        display: flex;\n        flex-direction: column;\n        gap: 1rem;\n        img {\n          border-radius: 5px;\n          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,\n            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;\n          width: 100%;\n          max-width: 300px;\n          max-height: 420px;\n          object-fit: cover;\n          @include tabletPortrait {\n            max-width: 350px;\n            max-height: 470px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n        }\n        .movie-details {\n          display: flex;\n          justify-content: space-between;\n          align-items: center;\n          gap: 1rem;\n          width: 100%;\n          max-width: 300px;\n          @include tabletPortrait {\n            max-width: 350px;\n            max-height: 470px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n          .movie-title {\n            display: block;\n            color: var(--white);\n            font-weight: bold;\n            letter-spacing: 1px;\n          }\n          .movie-year {\n            color: var(--customYellow);\n            font-size: 14px;\n            font-weight: bold;\n            letter-spacing: 1px;\n            text-wrap: nowrap;\n          }\n        }\n        .movie-info {\n          display: flex;\n          justify-content: space-between;\n          width: 100%;\n          max-width: 300px;\n          @include tabletPortrait {\n            max-width: 350px;\n            max-height: 470px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n          .movie-quality {\n            color: var(--customYellow);\n            border: 2px solid var(--white);\n            font-size: 11px;\n            padding: 5px 10px;\n            font-weight: bold;\n            line-height: 1;\n          }\n          .duration-and-rating {\n            display: flex;\n            align-items: center;\n            gap: 10px;\n            font-weight: 400;\n            font-size: 12px;\n            letter-spacing: 1px;\n            .fa-thumbs-up {\n              color: var(--customYellow);\n            }\n            .rating {\n              color: #e3dfdf;\n            }\n          }\n        }\n      }\n    }\n  }\n}\n// .movie-swipe-section {\n//   max-width: 80%;\n//   background-color: rgba(150, 143, 238, 0.072);\n//   margin: auto;\n//   padding: 2rem 2.5rem;\n//   .slick-slide img {\n//     display: block;\n//     object-fit: cover;\n//     height: 300px;\n//   }\n//   .slick-next:before,\n//   .slick-prev:before {\n//     font-size: 40px;\n//     position: absolute;\n//   }\n//   .slick-prev:before {\n//     right: 2rem;\n//   }\n//   .slick-next:before {\n//     left: 2rem;\n//   }\n// }\n","// Header/Navbar styling\n// Common value declaration\n\nheader .container {\n  // background-color: #171d22;\n  color: var(--white);\n  width: 80%;\n  margin: auto;\n  padding: 3rem 0rem;\n  @include tabletLandscape {\n    width: 90%;\n  }\n}\n.navbar-flex {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  .logo-container {\n    img {\n      font-weight: bold;\n      color: var(--customYellow);\n      font-size: 30px;\n      letter-spacing: 4px;\n      text-transform: uppercase;\n    }\n  }\n  .fa-bars {\n    display: none;\n    @include tabletLandscape {\n      display: block;\n      cursor: pointer;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n  }\n  .nav-toolbar {\n    display: flex;\n    align-items: center;\n    gap: 2rem;\n\n    .fa-search,\n    .fa-user {\n      font-size: 17px;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n    .subscribe-btn {\n      @include tabletLandscape {\n        display: none;\n      }\n    }\n    //mobile menu styling\n\n    .mobile-menu-container {\n      width: 300px;\n      max-width: 100%;\n      height: 100%;\n      display: none;\n      position: fixed;\n      right: 0;\n      top: 0;\n      background-color: var(--darkBg);\n\n      @include tabletLandscape {\n        display: flex;\n        flex-direction: column;\n        z-index: 99;\n\n        nav {\n          display: flex;\n          ul {\n            width: 100%;\n            display: flex;\n            flex-direction: column;\n            li {\n              border-top: 1px solid rgb(255 255 255 / 10%);\n              margin-right: 0;\n              a {\n                padding: 10px 25px;\n                line-height: 24px;\n                font-size: 15px;\n                position: relative;\n                display: block;\n                font-weight: 500;\n                text-transform: capitalize;\n              }\n            }\n          }\n        }\n      }\n      .mob-menu-header {\n        position: relative;\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        padding: 30px 25px;\n        .logo-container {\n          img {\n            font-size: 24px;\n          }\n        }\n        .close-icon {\n          font-size: 20px;\n        }\n      }\n    }\n    .mobile-nav-backdrop {\n      display: none;\n    }\n\n    .mobile-nav-backdrop.visible {\n      display: block;\n      position: fixed;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      z-index: 2;\n      opacity: 0.8;\n      background: var(--darkBg);\n      transition: 0.6s;\n    }\n    .mobile-nav-open {\n      transition: 0.6s;\n      transform: translateX(0%);\n    }\n    .mobile-nav-closed {\n      transition: 0.6s;\n      transform: translateX(101%);\n      opacity: 0;\n    }\n  }\n}\nheader nav ul {\n  display: inline-block;\n  font-size: var(--mainFontSize);\n  li {\n    display: inline-block;\n    margin-right: 20px;\n\n    a {\n      color: var(--white);\n      transition: all 300ms ease-in-out;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n    .active {\n      color: var(--customYellow);\n    }\n  }\n  @include tabletLandscape {\n    display: none;\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/global.scss","webpack://./src/styles/_home.scss","webpack://./src/styles/_nav.scss"],"names":[],"mappings":"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","sourcesContent":["/* Screen size breakpoints */\n$breakpoint-mobile: 576px; /* Small mobile devices */\n$breakpoint-tablet-portrait: 768px; /* Portrait mode tablets */\n$breakpoint-tablet-landscape: 1024px; /* Landscape mode tablets */\n$breakpoint-desktop: 1280px; /* Standard desktops */\n$breakpoint-large-desktop: 1440px; /* Large desktops */\n$breakpoint-very-large-desktop: 1600px; /* Screens which are much more larger than regular dekstop */\n\n@mixin legacyMobile {\n  @media (max-width: $breakpoint-mobile) {\n    @content;\n  }\n}\n@mixin premiumMobile {\n  @media (max-width: $breakpoint-tablet-portrait) {\n    @content;\n  }\n}\n@mixin tabletPortrait {\n  @media (max-width: $breakpoint-tablet-landscape) {\n    @content;\n  }\n}\n@mixin tabletLandscape {\n  @media (max-width: $breakpoint-desktop) {\n    @content;\n  }\n}\n@mixin desktop {\n  @media (max-width: $breakpoint-large-desktop) {\n    @content;\n  }\n}\n@mixin veryLargeDesktop {\n  @media (min-width: $breakpoint-very-large-desktop) {\n    @content;\n  }\n}\n\n// @import url(\"https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap\");\n\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap\");\n@import \"home\";\n@import \"movies\";\n@import \"tvshows\";\n@import \"contact\";\n@import \"documentaries\";\n@import \"nav\";\n\n// Common value declaration\n:root {\n  --customYellow: #e4d804;\n  --darkBg: #171d22;\n  --white: #fff;\n  --mainFont: \"Poppins\";\n  --mainFontSize: 14px;\n  --buttonBg: #20212b;\n  --darkBorder: #2d303d;\n  --logoFont: \"Hammersmith One\", sans-serif;\n}\n\n// All elements standart styling\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\n// html initial height setting\nhtml {\n  min-height: 100vh;\n}\n\nbody {\n  background-color: var(--darkBg);\n  margin: 0;\n  font-family: var(--mainFont);\n  min-height: s 100vh;\n  transition: 0.5s;\n}\n\nh1 {\n  font-size: 3em;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n  transition: 0.5s;\n  font-weight: bold;\n  text-transform: uppercase;\n}\n\ni {\n  cursor: pointer;\n  transition: 0.5s;\n}\n.btn {\n  font-family: inherit;\n  user-select: none;\n  -moz-user-select: none;\n  background: #12151e none repeat scroll 0 0;\n  border: 2px solid var(--customYellow);\n  border-radius: 50px;\n  color: var(--white);\n  cursor: pointer;\n  display: inline-block;\n  font-size: 12px;\n  font-weight: 700;\n  letter-spacing: 1px;\n  line-height: 1.5;\n  margin-bottom: 0;\n  padding: 10px 24px;\n  text-align: center;\n  text-transform: uppercase;\n  touch-action: manipulation;\n  transition: all 0.3s ease 0s;\n  vertical-align: middle;\n  white-space: nowrap;\n  max-width: 200px;\n}\n.btn:hover {\n  background-color: var(--customYellow);\n  i {\n    color: var(--darkBg);\n  }\n  color: var(--darkBg);\n}\n.btn > i {\n  margin-right: 7px;\n}\nimg {\n  // max-width: 100%;\n  display: block;\n}\n","//------- Section 1 -----------\n.home {\n  color: var(--white);\n  background-image: url(\"https://image.tmdb.org/t/p/original/1m1rXopfNDVL3UMiv6kriYaJ3yE.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 80vh;\n  width: 100%;\n  .headerbg {\n    width: 100%;\n    height: 100vh;\n    background: linear-gradient(\n      to right,\n      rgba(34, 31, 31, 1) 0%,\n      rgba(34, 31, 31, 0.4) 100%\n    );\n    .banner-wrapper {\n      width: 80%;\n      margin: auto;\n      padding: 10rem 0rem;\n      @include tabletLandscape {\n        width: 90%;\n      }\n      /* 6. Banner */\n      .banner {\n        font-size: 100%;\n        text-shadow: 0 5px 10px #0004;\n        .sub-title {\n          color: var(--customYellow);\n          font-size: 1.5em;\n          margin-bottom: 10px;\n          letter-spacing: 4px;\n          text-transform: uppercase;\n        }\n        //  Banner content initial load animation\n        h1,\n        h2,\n        div,\n        .banner-btn {\n          transform: translateY(20px);\n          // filter: blur(20px);\n          opacity: 0;\n          animation: showBannerContent 1s linear 1 forwards;\n        }\n\n        @keyframes showBannerContent {\n          to {\n            opacity: 1;\n            // filter: blur(0);\n            transform: translateY(0);\n          }\n        }\n        h2 {\n          animation-delay: 0.5s;\n        }\n        h1 {\n          animation-delay: 0.7s;\n        }\n        div {\n          animation-delay: 0.9s;\n        }\n        .banner-btn {\n          animation-delay: 1.1s;\n        }\n\n        // End of initial load animation\n\n        .title {\n          span {\n            color: var(--customYellow);\n          }\n          font-size: clamp(24px, 3vw + 1rem, 60px);\n          line-height: 1.2;\n          margin-bottom: 29px;\n        }\n        // .banner-btn {\n        //   .play-icon:hover {\n        //     transform: rotate(360deg);\n        //   }\n        // }\n      }\n\n      .banner-meta {\n        margin-bottom: 35px;\n        ul {\n          display: flex;\n          flex-wrap: wrap;\n          li {\n            display: flex;\n            align-items: center;\n            margin-bottom: 15px;\n            margin-right: 18px;\n\n            &.quality > span {\n              font-size: 11px;\n              text-transform: uppercase;\n              color: #21232b;\n              background: #fff;\n              font-weight: 700;\n              padding: 7px 11px;\n              line-height: 1;\n              &:last-child {\n                background: transparent;\n                color: #fff;\n                margin-left: 9px;\n                border: 2px solid #fff;\n                padding: 5px 10px;\n              }\n            }\n            &.category {\n              display: flex;\n              gap: 5px;\n\n              > a {\n                font-size: var(--mainFontSize);\n                font-weight: 500;\n                color: #e3dfdf;\n                text-transform: none;\n                &:hover {\n                  color: var(--customYellow);\n                }\n              }\n            }\n            &.release-time {\n              display: flex;\n              gap: 1rem;\n              > span {\n                font-size: var(--mainFontSize);\n                font-weight: 500;\n                color: #e3dfdf;\n                > i {\n                  color: var(--customYellow);\n                  font-size: 12px;\n                  margin-right: 5px;\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n// Section 2 - Latest movies section\n.latest-movies-section {\n  display: flex;\n  min-height: 840px;\n  max-width: 100%;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--darkBg);\n  .content-container {\n    width: 80%;\n    margin: auto;\n    padding: 4rem 0rem;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    @include veryLargeDesktop {\n      width: 90%;\n    }\n    @include legacyMobile {\n      width: 90%;\n    }\n    .content-header-part {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      justify-content: space-between;\n      padding: 3rem 0;\n      gap: 1rem;\n      @include tabletPortrait {\n        flex-direction: column;\n        align-items: center;\n      }\n\n      h2 {\n        color: var(--white);\n        font-size: 36px;\n        text-wrap: nowrap;\n      }\n      .content-type-buttons {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        gap: 1rem;\n        @include legacyMobile {\n          flex-wrap: wrap;\n        }\n        button {\n          border: 2px solid var(--darkBorder);\n          background-color: var(--darkBg);\n          &:hover {\n            border-color: var(--customYellow);\n            color: var(--white);\n          }\n        }\n        .swiper-buttons {\n          display: flex;\n          flex-direction: row;\n          border: 2px solid var(--darkBorder);\n          background-color: var(--darkBg);\n          border-radius: 20px;\n          @include tabletPortrait {\n            display: none;\n          }\n          &:hover {\n            border-color: var(--customYellow);\n          }\n          .left-slide,\n          .right-slide {\n            height: 100%;\n            width: 100%;\n            background-color: transparent;\n            border: none;\n            color: var(--white);\n          }\n          .left-slide {\n            padding: 10px 8px 10px 24px;\n            border-radius: 20px 0px 0px 20px;\n          }\n          .right-slide {\n            padding: 10px 24px 10px 8px;\n            border-radius: 0px 20px 20px 0px;\n          }\n          span {\n            border-left: 2px solid var(--darkBorder);\n            margin: 10px;\n          }\n        }\n      }\n    }\n\n    // ----------------------------\n\n    .movie-data-part {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      align-items:stretch;\n      justify-items: center;\n      gap: 2rem;\n      @include desktop {\n        grid-template-columns: repeat(3, 1fr);\n      }\n      @include tabletPortrait {\n        grid-template-columns: repeat(2, 1fr);\n      }\n      @include premiumMobile {\n        grid-template-columns: repeat(1, 1fr);\n      }\n      .movie-card {\n        display: flex;\n        flex-direction: column;\n        gap: 1rem;\n        img {\n          border-radius: 5px;\n          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,\n            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;\n          width: 100%;\n          max-width: 450px;\n          max-height: 565px;\n          object-fit: cover;\n          @include tabletPortrait {\n            max-width: 400px;\n            max-height: 515px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n        }\n        .movie-details {\n          display: flex;\n          justify-content: space-between;\n          align-items: center;\n          gap: 1rem;\n          width: 100%;\n          max-width: 300px;\n          @include tabletPortrait {\n            max-width: 350px;\n            max-height: 470px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n          .movie-title {\n            display: block;\n            color: var(--white);\n            font-weight: bold;\n            letter-spacing: 1px;\n          }\n          .movie-year {\n            color: var(--customYellow);\n            font-size: 14px;\n            font-weight: bold;\n            letter-spacing: 1px;\n            text-wrap: nowrap;\n          }\n        }\n        .movie-info {\n          display: flex;\n          justify-content: space-between;\n          width: 100%;\n          max-width: 300px;\n          @include tabletPortrait {\n            max-width: 350px;\n            max-height: 470px;\n          }\n          @include premiumMobile {\n            max-width: 440px;\n            max-height: 645px;\n          }\n          .movie-quality {\n            color: var(--customYellow);\n            border: 2px solid var(--white);\n            font-size: 11px;\n            padding: 5px 10px;\n            font-weight: bold;\n            line-height: 1;\n          }\n          .duration-and-rating {\n            display: flex;\n            align-items: center;\n            gap: 10px;\n            font-weight: 400;\n            font-size: 12px;\n            letter-spacing: 1px;\n            .fa-thumbs-up {\n              color: var(--customYellow);\n            }\n            .rating {\n              color: #e3dfdf;\n            }\n          }\n        }\n      }\n    }\n  }\n}\n// .movie-swipe-section {\n//   max-width: 80%;\n//   background-color: rgba(150, 143, 238, 0.072);\n//   margin: auto;\n//   padding: 2rem 2.5rem;\n//   .slick-slide img {\n//     display: block;\n//     object-fit: cover;\n//     height: 300px;\n//   }\n//   .slick-next:before,\n//   .slick-prev:before {\n//     font-size: 40px;\n//     position: absolute;\n//   }\n//   .slick-prev:before {\n//     right: 2rem;\n//   }\n//   .slick-next:before {\n//     left: 2rem;\n//   }\n// }\n\n// Emailing Section\n\n.emailing-section {\n  width: 100%;\n  margin: auto;\n  padding: 50px 3%;\n  background-color: var(--customYellow);\n  display: flex;\n  justify-content: center;\n  .emailing-area {\n    display: flex;\n    align-items: center;\n    gap: 3rem;\n    .content {\n      h3 {\n        font-size: 30px;\n        text-transform: uppercase;\n      }\n      p {\n        font-size: 14px;\n      }\n    }\n    .email-box {\n      background-color: transparent;\n      input {\n        padding: 17px 30px;\n        background-color: white;\n        border: none;\n        box-shadow: 0px 3px 4px 0px rgba(30, 30, 30, 0.17);\n        border-radius: 4px;\n        outline: none;\n      }\n\n      button {\n        padding: 17px 30px;\n        background-color: var(--darkBg);\n        box-shadow: 0px 3px 4px 0px rgba(30, 30, 30, 0.17);\n        border-radius: 4px;\n        color: var(--customYellow);\n        font-weight: bold;\n        border: none;\n        text-transform: uppercase;\n        cursor: pointer;\n      }\n    }\n  }\n}\n","// Header/Navbar styling\n// Common value declaration\n\nheader {\n  width: 100%;\n  position: fixed;\n  transition: background-color 0.3s;\n  z-index: 99;\n  .container {\n    // background-color: #171d22;\n    color: var(--white);\n    width: 80%;\n    margin: auto;\n    padding: 2rem 0rem;\n    @include tabletLandscape {\n      width: 90%;\n    }\n  }\n}\n.scrolled {\n  background-color: var(--darkBg);\n}\n.navbar-flex {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  .logo-container {\n    display: flex;\n    flex-direction: row;\n    align-items: end;\n    gap: 1rem;\n    img {\n      font-weight: bold;\n      color: var(--customYellow);\n      width: 55px;\n      font-size: 30px;\n      letter-spacing: 4px;\n      text-transform: uppercase;\n      content: url(\"../assets/images/logo.png\");\n    }\n    .logo-text {\n      font-family: var(--logoFont);\n      font-size: 35px;\n    }\n  }\n  .fa-bars {\n    display: none;\n    @include tabletLandscape {\n      display: block;\n      cursor: pointer;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n  }\n  .nav-toolbar {\n    display: flex;\n    align-items: center;\n    gap: 2rem;\n\n    .fa-search,\n    .fa-user {\n      font-size: 17px;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n    .subscribe-btn {\n      @include tabletLandscape {\n        display: none;\n      }\n    }\n    //mobile menu styling\n\n    .mobile-menu-container {\n      width: 300px;\n      max-width: 100%;\n      height: 100%;\n      display: none;\n      position: fixed;\n      right: 0;\n      top: 0;\n      background-color: var(--darkBg);\n\n      @include tabletLandscape {\n        display: flex;\n        flex-direction: column;\n        z-index: 99;\n\n        nav {\n          display: flex;\n          ul {\n            width: 100%;\n            display: flex;\n            flex-direction: column;\n            li {\n              border-top: 1px solid rgb(255 255 255 / 10%);\n              margin-right: 0;\n              a {\n                padding: 10px 25px;\n                line-height: 24px;\n                font-size: 15px;\n                position: relative;\n                display: block;\n                font-weight: 500;\n                text-transform: capitalize;\n              }\n            }\n          }\n        }\n      }\n      .mob-menu-header {\n        position: relative;\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        padding: 30px 25px;\n        .logo-container {\n          img {\n            font-size: 24px;\n          }\n        }\n        .close-icon {\n          font-size: 20px;\n        }\n      }\n    }\n    .mobile-nav-backdrop {\n      display: none;\n    }\n\n    .mobile-nav-backdrop.visible {\n      display: block;\n      position: fixed;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      z-index: 2;\n      opacity: 0.8;\n      background: var(--darkBg);\n      transition: 0.6s;\n    }\n    .mobile-nav-open {\n      transition: 0.6s;\n      transform: translateX(0%);\n    }\n    .mobile-nav-closed {\n      transition: 0.6s;\n      transform: translateX(101%);\n      opacity: 0;\n    }\n  }\n}\nheader nav ul {\n  display: inline-block;\n  font-size: var(--mainFontSize);\n  li {\n    display: inline-block;\n    margin-right: 20px;\n\n    a {\n      color: var(--white);\n      transition: all 300ms ease-in-out;\n      &:hover {\n        color: var(--customYellow);\n      }\n    }\n    .active {\n      color: var(--customYellow);\n    }\n  }\n  @include tabletLandscape {\n    display: none;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -862,6 +943,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -1210,6 +1326,16 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/images/logo.png":
+/*!************************************!*\
+  !*** ./src/assets/images/logo.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "images/logo.png";
+
 /***/ })
 
 /******/ 	});
@@ -1238,6 +1364,9 @@ module.exports = styleTagTransform;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -1263,6 +1392,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1277,6 +1418,55 @@ module.exports = styleTagTransform;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"contact": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -1300,4 +1490,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle2e3f24f06e86bb1d4d3a.js.map
+//# sourceMappingURL=bundlee7ee492f1b677dda0f49.js.map
