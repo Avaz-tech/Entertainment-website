@@ -7,13 +7,15 @@ header {
   transition: background-color 0.3s;
   z-index: 99;
   .container {
-    // background-color: #171d22;
     color: var(--white);
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 2rem 0rem;
-    @include tabletLandscape {
-      width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tabletPortrait {
+      // width: 80%;
     }
   }
 }
