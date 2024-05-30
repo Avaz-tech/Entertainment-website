@@ -26,3 +26,21 @@ imagePaths.forEach((path) => {
     img.src = imageFiles2(path).default;
   }
 });
+
+document
+  .getElementById("watch-now-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    var videoContainer = document.getElementById("video-container");
+    var video = document.getElementById("video");
+
+    videoContainer.style.display = "block";
+    video.src = "https://www.youtube.com/embed/tztCsUyiQv8?autoplay=1";
+  });
+document.getElementById("close-btn").addEventListener("click", function () {
+  var videoContainer = document.getElementById("video-container");
+  var video = document.getElementById("video");
+
+  video.src = "";
+  videoContainer.style.display = "none";
+});

@@ -15,6 +15,7 @@
       rgba(34, 31, 31, 0.4) 100%
     );
     .banner-wrapper {
+      height: 100%;
       width: 80%;
       margin: auto;
       padding: 10rem 0rem;
@@ -80,6 +81,37 @@
         // }
       }
 
+      .video-container {
+        display: none;
+        text-align: center;
+        background-color: black;
+        border-radius: 5px;
+        width: inherit;
+        position: absolute;
+        top: 120px;
+      }
+
+      .video-container iframe {
+        width: 90%;
+        max-width: 1300px;
+        height:45vw;
+      }
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 5px;
+      }
+
+      .banner-btn i {
+        margin-right: 5px;
+      }
       .banner-meta {
         margin-bottom: 35px;
         ul {
@@ -234,7 +266,7 @@
     .movie-data-part {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      align-items:stretch;
+      align-items: stretch;
       justify-items: center;
       gap: 2rem;
       @include desktop {
