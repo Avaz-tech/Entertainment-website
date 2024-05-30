@@ -94,7 +94,7 @@
       .video-container iframe {
         width: 90%;
         max-width: 1300px;
-        height:45vw;
+        height: 45vw;
       }
       .close-btn {
         position: absolute;
@@ -174,7 +174,8 @@
   }
 }
 // Section 2 - Latest movies section
-.latest-movies-section {
+.latest-movies-section,
+.new-movies-section {
   display: flex;
   min-height: 840px;
   max-width: 100%;
@@ -182,7 +183,7 @@
   align-items: center;
   background-color: var(--darkBg);
   .content-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 4rem 0rem;
     display: flex;
@@ -195,6 +196,7 @@
       width: 90%;
     }
     .content-header-part {
+      text-align: center;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -209,7 +211,7 @@
       h2 {
         color: var(--white);
         font-size: 36px;
-        text-wrap: nowrap;
+        // text-wrap: nowrap;
       }
       .content-type-buttons {
         display: flex;
@@ -272,10 +274,10 @@
       @include desktop {
         grid-template-columns: repeat(3, 1fr);
       }
-      @include tabletPortrait {
+      @include premiumMobile {
         grid-template-columns: repeat(2, 1fr);
       }
-      @include premiumMobile {
+      @include legacyMobile {
         grid-template-columns: repeat(1, 1fr);
       }
       .movie-card {
