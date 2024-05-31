@@ -64,16 +64,55 @@ header {
   .nav-toolbar {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    // gap: 0.5rem;
 
+    .search-container {
+      border-radius: 20px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      transition: background-color 0.9s linear;
+      input {
+        opacity: 0;
+        max-width: 0;
+        transition: opacity 0.5s linear, max-width 0.5s linear;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        overflow: hidden;
+        &::placeholder {
+          font-family: var(--logoFont);
+          color: gray;
+        }
+      }
+    }
+
+    .visible {
+      background-color: black;
+      // transition: background-color 0.5s linear;
+      input {
+        opacity: 1;
+        max-width: 200px;
+        transition: opacity 0.5s linear, max-width 0.5s linear;
+      }
+    }
     .fa-search,
     .fa-user {
-      font-size: 17px;
+      font-size: 15px;
       &:hover {
         color: var(--customYellow);
       }
     }
+    .fa-user {
+      padding: 0 1rem;
+      border-left: 2px solid #ffffff23;
+      
+    }
     .subscribe-btn {
+      margin-left: 1rem;
       @include tabletLandscape {
         display: none;
       }
@@ -133,6 +172,7 @@ header {
         }
       }
     }
+
     .mobile-nav-backdrop {
       display: none;
     }

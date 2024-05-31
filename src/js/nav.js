@@ -56,8 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const subscribeDiv = document.createElement("div");
   subscribeDiv.classList.add("nav-toolbar", "subscribe", "flex");
 
-  const searchIcon = document.createElement("i");
-  searchIcon.classList.add("fas", "fa-search");
+  const searchContainer = document.createElement("div");
+  searchContainer.classList.add("search-container");
+  searchContainer.innerHTML = `
+      <input type="text" name="search" "search" class="search-input" placeholder="Search for movies..." />
+      <i class="fas fa-search search-btn" />
+    `;
 
   const userIcon = document.createElement("i");
   userIcon.id = "playbtn";
@@ -67,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   subscribeBtn.classList.add("btn", "subscribe-btn");
   subscribeBtn.textContent = "SUBSCRIBE";
 
-  subscribeDiv.appendChild(searchIcon);
+  subscribeDiv.appendChild(searchContainer);
   subscribeDiv.appendChild(userIcon);
   subscribeDiv.appendChild(subscribeBtn);
   subscribeDiv.appendChild(hamburgerIcon);
@@ -155,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileNavBackdropInstance.classList.remove("visible");
     mobileNavContainerInstance.classList.add("mobile-nav-closed");
   });
-
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {

@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const moviesBtn = document.getElementById("movies-btn");
   const tvshowsBtn = document.getElementById("tvshows-btn");
   const documentariesBtn = document.getElementById("documentaries-btn");
-  const searchIcon = document.querySelector(".fa-search");
-  console.log("search icon", searchIcon);
 
   // Function to fetch movie data from API
   async function fetchMovieData(searchQuery = "") {
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     url = "https://api.themoviedb.org/3/trending/tv/day?language=en-US&page=1";
     updateMovieCards();
   });
-
   documentariesBtn.addEventListener("click", function () {
     url = "https://api.themoviedb.org/3/tv/on_the_air?language=en-US&page=1";
     updateMovieCards();
@@ -88,22 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateMovieCards();
 
-  // Create and append the search bar
-  const subscribeDiv = document.querySelector(".nav-toolbar.subscribe.flex");
-  const searchContainer = document.createElement("div");
-  searchContainer.classList.add("search-container");
-  searchContainer.innerHTML = `
-    <input type="text" class="search-input" placeholder="Search for movies..." />
-    <button class="search-btn">Search</button>
-  `;
-  subscribeDiv.appendChild(searchContainer);
-
+  // Create and ssappend the search bar
+  const searchContainer = document.querySelector(".search-container");
+  const searchInput = searchContainer.querySelector(".search-input");
+  const searchIcon = document.querySelector(".fa-search");
   searchIcon.addEventListener("click", () => {
-    console.log("+=======");
     searchContainer.classList.toggle("visible");
   });
 
-  const searchInput = searchContainer.querySelector(".search-input");
   const searchBtn = searchContainer.querySelector(".search-btn");
 
   searchBtn.addEventListener("click", () => {
