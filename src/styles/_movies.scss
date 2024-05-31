@@ -1,0 +1,75 @@
+.movies {
+  color: var(--white);
+  background-image: url("https://image.tmdb.org/t/p/original/47QrJ0K8W6DEdZOZG9UohrfDK7i.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  .headerbg {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      rgba(34, 31, 31, 1) 0%,
+      rgba(34, 31, 31, 0.4) 100%
+    );
+    .banner-wrapper {
+      height: 100%;
+      width: 80%;
+      margin: auto;
+      padding: 10rem 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tabletLandscape {
+        width: 90%;
+      }
+      /* 6. Banner */
+      .banner {
+        font-size: 100%;
+        text-shadow: 0 5px 10px #0004;
+        //  Banner content initial load animation
+        h1,
+        div {
+          transform: translateY(20px);
+          opacity: 0;
+          animation: showBannerContent 1s linear 1 forwards;
+        }
+
+        @keyframes showBannerContent {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        h1 {
+          animation-delay: 0.7s;
+        }
+        div {
+          animation-delay: 0.9s;
+        }
+        // End of initial load animation
+        .title {
+          span {
+            color: var(--customYellow);
+          }
+          font-size: clamp(24px, 3vw + 1rem, 60px);
+          line-height: 1.2;
+          margin-bottom: 29px;
+        }
+        .sub-content {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          font-weight: bold;
+          a:first-child {
+            color: var(--customYellow);
+          }
+          a:last-child {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
