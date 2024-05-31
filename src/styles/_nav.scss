@@ -39,10 +39,16 @@ header {
       letter-spacing: 4px;
       text-transform: uppercase;
       content: url("../assets/images/logo.png");
+      @include premiumMobile {
+        width: 45px;
+      }
     }
     .logo-text {
       font-family: var(--logoFont);
       font-size: 35px;
+      @include premiumMobile {
+        font-size: 25px;
+      }
     }
   }
   .fa-bars {

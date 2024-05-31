@@ -89,13 +89,13 @@
         width: inherit;
         position: absolute;
         top: 120px;
+        iframe {
+          width: 90%;
+          max-width: 1300px;
+          height: 45vw;
+        }
       }
 
-      .video-container iframe {
-        width: 90%;
-        max-width: 1300px;
-        height: 45vw;
-      }
       .close-btn {
         position: absolute;
         top: 10px;
@@ -394,7 +394,6 @@
 // }
 
 // Emailing Section
-
 .emailing-section {
   width: 100%;
   margin: auto;
@@ -405,6 +404,10 @@
   .emailing-area {
     display: flex;
     align-items: center;
+    text-align: center;
+    @include tabletPortrait {
+      flex-direction: column;
+    }
     gap: 3rem;
     .content {
       h3 {
@@ -417,6 +420,11 @@
     }
     .email-box {
       background-color: transparent;
+      display: flex;
+      gap: 3px;
+      @include premiumMobile {
+        flex-direction: column;
+      }
       input {
         padding: 17px 30px;
         background-color: white;
