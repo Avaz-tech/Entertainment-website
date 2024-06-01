@@ -89,16 +89,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchContainer = document.querySelector(".search-container");
   const searchInput = searchContainer.querySelector(".search-input");
   const searchIcon = document.querySelector(".fa-search");
+
   searchIcon.addEventListener("click", () => {
     searchContainer.classList.toggle("visible");
+
+    $("html, body").animate(
+      {
+        scrollTop: $("#latest-movies-section").offset().top,
+      },
+      1000
+    );
   });
 
   const searchBtn = searchContainer.querySelector(".search-btn");
-
+  // update movie cards with search results when search icon is clicked
   searchBtn.addEventListener("click", () => {
     const query = searchInput.value.trim();
     if (query) {
       updateMovieCards(query);
+    }
+  });
+  // update movie cards with search results when Enter is clicked
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      const query = searchInput.value.trim();
+      if (query) {
+        updateMovieCards(query);
+      }
     }
   });
 });

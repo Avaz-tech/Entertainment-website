@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchContainer = document.createElement("div");
   searchContainer.classList.add("search-container");
   searchContainer.innerHTML = `
-      <input type="text" name="search" "search" class="search-input" placeholder="Search for movies..." />
+      <input type="text" name="search" class="search-input" placeholder="Search for movies..." />
       <i class="fas fa-search search-btn" />
     `;
 
