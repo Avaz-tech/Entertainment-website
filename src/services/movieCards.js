@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     $("html, body").animate(
       {
-        scrollTop: $("#latest-movies-section").offset().top,
+        scrollTop: $("#media-cards-section").offset().top,
       },
       1000
     );
