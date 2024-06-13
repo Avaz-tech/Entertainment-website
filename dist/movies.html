@@ -12,7 +12,7 @@
     ></script>
     <script
       type="text/javascript"
-      src="http://code.jquery.com/jquery-latest.js"
+      src="https://code.jquery.com/jquery-latest.js"
     ></script>
 
     <!--  Swiper CSS -->
@@ -22,25 +22,113 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <!-- Demo styles -->
-  <link rel="icon" href="favicon.ico"><script defer src="bundle975969b84ce3ae7babd4.js"></script></head>
+  <link rel="icon" href="favicon.ico"><script defer src="bundle107864d0ca77feac0906.js"></script></head>
 
   <body class="navbar">
     <!-- Navigation bar creation-->
     <section class="movies">
       <div class="headerbg">
         <header id="header" class="header"></header>
+
+        <!-- custom content -->
+        <div class="banner-wrapper">
+          <div class="banner">
+            <h1 class="title fade-in-up">Our <span>Movie</span></h1>
+            <div class="sub-content">
+              <a href="/">HOME</a>
+              <span>|</span>
+              <a href="#">MOVIE</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Not Found Banner -->
 
-    <section class="not-found-section">
+    <!-- <section class="not-found-section">
       <div class="not-found-banner">
-        <div><img src="/src/assets/images/notfound.svg" alt="" /></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div><img src="" alt="Not Found" /></div>
+        <div class="page-not-found-txt">Oops! Page is being updated</div>
+        <div><a href="/" class="back-to-home-btn">Back To Home</a></div>
+      </div>
+    </section> -->
+
+    <section class="new-movies-section" id="media-cards-section">
+      <div class="content-container">
+        <div class="content-header-part">
+          <h2>New Released Movies</h2>
+          <div class="content-type-buttons">
+            <button id="movies-btn" class="movies-btn btn">Movies</button>
+            <button id="tvshows-btn" class="tvshows-btn btn">Tv Shows</button>
+            <button id="documentaries-btn" class="documentaries-btn btn">
+              Documentaries
+            </button>
+            <!-- <div class="swiper-buttons">
+              <button class="left-slide">
+                <i class="fas fa-angle-left"></i>
+              </button>
+              <span></span>
+              <button class="right-slide">
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </div> -->
+          </div>
+        </div>
+        <!-- --- -->
+        <div class="movie-data-part">
+          <!-- Here dynamic movie data goes in -->
+        </div>
       </div>
     </section>
+
+    <!-- Emailing Section -->
+    <section class="emailing-section">
+      <div class="emailing-area">
+        <div class="content">
+          <h3>Start your 30 day trail</h3>
+          <p>Enter your email to create or restart you membership</p>
+        </div>
+        <div class="email-box">
+          <input
+            type="text"
+            class="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+          <button>Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <ul class="footer-quick-links">
+          <li><a href="">FAQ</a></li>
+          <li><a href="">HELP CENTER</a></li>
+          <li><a href="">TERMS OF USE</a></li>
+          <li><a href="">PRIVACY</a></li>
+        </ul>
+        <ul class="footer-social-links">
+          <li>
+            <a href=""><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-pinterest"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        Copyright © 2023. All Rights Reserved By <span>Uflicks</span>
+      </div>
+    </footer>
   </body>
 </html>

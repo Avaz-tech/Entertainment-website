@@ -27,10 +27,10 @@
     ></script>
     <script
       type="text/javascript"
-      src="http://code.jquery.com/jquery-latest.js"
+      src="https://code.jquery.com/jquery-latest.js"
     ></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <link rel="icon" href="favicon.ico"><script defer src="bundle42f5b339d161e5a34f8c.js"></script></head>
+  <link rel="icon" href="favicon.ico"><script defer src="bundlebfd209a9cf5b7c9b0fc0.js"></script></head>
 
   <body>
     <!-- Secton 1 -->
@@ -65,10 +65,20 @@
                 </li>
               </ul>
             </div>
-            <a href="" class="banner-btn fade-in-up btn">
+            <a href="" class="banner-btn fade-in-up btn" id="watch-now-btn">
               <i class="play-icon fa fa-play"></i>
               Watch Now
             </a>
+          </div>
+          <div class="video-container" id="video-container">
+            <iframe
+              id="video"
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <button class="close-btn" id="close-btn">&times;</button>
           </div>
         </div>
       </div>
@@ -114,14 +124,14 @@
       </div>
     </section> -->
     <!-- Secton 2 -->
-    <section class="latest-movies-section">
+    <section class="latest-movies-section" id="media-cards-section">
       <div class="content-container">
         <div class="content-header-part">
           <h2>Latest Movies</h2>
           <div class="content-type-buttons">
-            <button id="movies-btn" class="movies btn">Movies</button>
-            <button id="tvshows-btn" class="tvshows btn">Tv Shows</button>
-            <button id="documentaries-btn" class="documentaries btn">
+            <button id="movies-btn" class="movies-btn btn">Movies</button>
+            <button id="tvshows-btn" class="tvshows-btn btn">Tv Shows</button>
+            <button id="documentaries-btn" class="documentaries-btn btn">
               Documentaries
             </button>
             <!-- <div class="swiper-buttons">
@@ -150,7 +160,13 @@
           <p>Enter your email to create or restart you membership</p>
         </div>
         <div class="email-box">
-          <input type="text" class="email" placeholder="Enter your email" />
+          <input
+            type="text"
+            class="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+          />
           <button>Get Started</button>
         </div>
       </div>
@@ -158,8 +174,30 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="content-container">
-        
+      <div class="footer-content">
+        <ul class="footer-quick-links">
+          <li><a href="">FAQ</a></li>
+          <li><a href="">HELP CENTER</a></li>
+          <li><a href="">TERMS OF USE</a></li>
+          <li><a href="">PRIVACY</a></li>
+        </ul>
+        <ul class="footer-social-links">
+          <li>
+            <a href=""><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-pinterest"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        Copyright © 2023. All Rights Reserved By <span>Uflicks</span>
       </div>
     </footer>
 
