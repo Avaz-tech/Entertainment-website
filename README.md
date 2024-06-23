@@ -1,1 +1,1 @@
-![home page](assets/images/uflicks_lading_img.png)
+![home page](/assets/images/uflicks_landing_img.png)
