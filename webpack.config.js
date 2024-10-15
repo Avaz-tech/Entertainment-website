@@ -1,5 +1,6 @@
-const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 const pages = ["movies", "tvshows", "documentaries", "contact"];
 const multipleHtmlPages = pages.map((page) => {
@@ -22,7 +23,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle[contenthash].js",
+    filename: "[name].[contenthash].js",
     clean: true,
     assetModuleFilename: "images/[name][ext]",
   },
@@ -41,7 +42,11 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader, // Replace 'style-loader' with 'MiniCssExtractPlugin.loader'
+          "css-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.js$/,
@@ -66,6 +71,9 @@ module.exports = {
       template: "src/pages/home.html",
       chunks: ["index"],
       favicon: "src/assets/icons/favicon.ico",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css", // Extract CSS into separate file
     }),
   ].concat(multipleHtmlPages),
 };
